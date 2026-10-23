@@ -286,17 +286,17 @@ body { margin: 0; }
         <span class="badge ev-weak">Weak evidence, but the limits are known</span></article>
       <article class="tcard"><h3>Videos</h3>
         <p class="takes"><strong>Keeps building:</strong> older how-to videos that people find through search keep bringing in views for years, along with customers for anything else you sell.</p>
-        <p class="takes"><strong>Levels off:</strong> no one can say. Platforms changed their pay rules four times in 2026, and studies that track creators over several years only follow the ones who stayed.</p>
+        <p class="takes"><strong>Levels off:</strong> hard to predict. Platforms changed their pay rules four times in 2026, and studies that track creators over several years only follow the ones who stayed.</p>
         <p class="takes"><strong>Your choice:</strong> keep it for fun, use it to promote anything else you sell, or treat it as a second income if Year 2 shows real growth.</p>
         <span class="badge ev-spec">Speculative</span></article>
       <article class="tcard"><h3>Amazon links</h3>
         <p class="takes"><strong>Keeps building:</strong> links in older videos keep earning while the products are still sold.</p>
         <p class="takes"><strong>Levels off:</strong> it moves up or down with your video audience, and with Amazon's rates. Amazon cut those rates in 2020 and again in 2026.</p>
-        <p class="takes"><strong>Your choice:</strong> keep it as a small extra, and don't plan around it.</p>
+        <p class="takes"><strong>Your choice:</strong> add it as a small extra alongside videos, or leave it out.</p>
         <span class="badge ev-spec">Speculative</span></article>
       <article class="tcard"><h3>Used books</h3>
         <p class="takes"><strong>Keeps building:</strong> your knowledge, which raises what you earn per hour up to a point.</p>
-        <p class="takes"><strong>Levels off:</strong> income doesn't build on itself. Year 3 looks like Year 2 unless you add hours, and the lifting gets harder over time.</p>
+        <p class="takes"><strong>Levels off:</strong> income doesn't build on itself. Year 3 looks like Year 2 unless you add hours. The work also involves carrying boxes of books.</p>
         <p class="takes"><strong>Your choice:</strong> keep it if you enjoy the hunt, narrow to a specialty, or move those hours to something else.</p>
         <span class="badge ev-weak">Weak evidence</span></article>
     </div>
@@ -841,7 +841,7 @@ const TIERS = [
   { id: "25", label: "Top 25%", note: "Better than three in four skilled, persistent people." },
   { id: "10", label: "Top 10%", note: "Better than nine in ten. This is about as high as the evidence reasonably supports." },
   { id: "5",  label: "Top 5%",  note: "Thin evidence. These figures are the edge of what the models allow, not observed data." },
-  { id: "1",  label: "Top 1%",  note: "Very thin evidence. These are outliers, often driven by luck, and should not be planned around." }
+  { id: "1",  label: "Top 1%",  note: "Very thin evidence. These are rare outliers: nice if it happens, but not something to count on." }
 ];
 const YEARS = [{ id: "y1", label: "Year 1" }, { id: "y2", label: "Year 2" }];
 const EV = {
@@ -862,7 +862,7 @@ const OPTIONS = [
       "Prices above $55 a dozen, a waitlist at graduation and the holidays, and repeat customers making up most orders.",
       "$60+ a dozen, shipping within Minnesota from Aug 2027, and every seasonal peak booked.",
       "A part-time helper or 100+ hours a month, a known local name, and wedding or corporate orders.",
-      "Paid help and sales near the $78k legal cap. The next step would be a licensed kitchen, which brings new costs and new risks."
+      "Paid help and sales near the $78k legal cap. The next step from here would be a licensed kitchen, which comes with its own costs and setup."
     ],
     ev: ["weak","weak","weak","thin","thin"],
     evText: [
@@ -886,11 +886,11 @@ const OPTIONS = [
     ],
     ev: ["weak","weak","weak","thin","spec"],
     evText: [
-      "YouTube's ad bar is 8,000 watch hours, about 120k–160k views a year. A typical weekly channel gets 15k–40k views, so most don't qualify in Year 1.",
+      "YouTube's ad bar is 8,000 watch hours, about 120k–160k views a year. A typical weekly channel gets 15k–40k views, so Year 1 is mostly about building up a library of videos.",
       "Pay rates come from vendor data ($2.25 per 1,000 food-video views, about 39% higher in Q4).",
       "Views are very concentrated: the top 1% of long-form videos took 54% of all first-week views (vidIQ, 38M videos).",
-      "Only survivor anecdotes exist at this level.",
-      "Luck dominates here. Celebrity-dog incomes are self-reported."
+      "The evidence at this level comes from individual success stories.",
+      "Luck plays a big part at this level. Celebrity-dog incomes are self-reported."
     ] },
   { id: "amazon", name: "Amazon links", measure: "Direct income per year", hours: 4, hoursText: "a few hours a month on top of the videos",
     driver: "It rides on the videos. Amazon sets the rate, and it was cut in 2026.",
@@ -902,15 +902,15 @@ const OPTIONS = [
       "A video audience at the top-25% level, linking products that match your videos, such as pet supplies or baking tools.",
       "Approved product videos on Amazon (an estimated $50–250 a month) plus link income from a large audience.",
       "Product videos winning the top spots on Amazon's own product pages.",
-      "A very large audience plus top placements. A single rate change could erase much of it."
+      "A very large audience plus top placements. Income at this level depends on Amazon's rates, which can change."
     ],
     ev: ["weak","weak","weak","thin","thin"],
     evText: [
-      "No honest median exists. Most income figures come from people selling courses.",
-      "No honest median exists. Most income figures come from people selling courses.",
+      "No reliable median is published. Many income claims online come from course sellers, so they're worth reading with care.",
+      "No reliable median is published. Many income claims online come from course sellers, so they're worth reading with care.",
       "Modelled from the video audience and Amazon's published rates.",
       "Top placement decisions are made by Amazon and can't be predicted.",
-      "Few comparable cases. Platform risk is high."
+      "Few comparable cases, and it depends on Amazon's rules."
     ] },
   { id: "books", name: "Used books", measure: "Net profit per year", hours: 40, hoursText: "about 40 hours a month",
     driver: "Mostly skill and hours. Fees cap what cheap books can earn, so knowledge is the lever.",
@@ -929,8 +929,8 @@ const OPTIONS = [
       "Fees are well documented. No book-specific earnings data exists.",
       "Fees are well documented. No book-specific earnings data exists.",
       "Matches the report's optimistic cases ($17–34 an hour).",
-      "Practitioner anecdotes only.",
-      "Practitioner anecdotes only. Rare-book dealing is a different trade."
+      "Based on sellers' own reports.",
+      "Based on sellers' own reports. Rare-book dealing is a specialist trade."
     ] }
 ];
 
@@ -1028,7 +1028,7 @@ function updateTotal() {
   document.getElementById("total").textContent = picked.length ? fmtR([lo, hi]) : "$0";
   const w = [];
   if (picked.length) w.push(`<strong>About ${hrs} hours a month</strong> across ${picked.map(o => o.name.toLowerCase()).join(", ")}.`);
-  if (hrs > 110) w.push("That's more than \"a few hours a day\", so landing at the same tier in every option at once is unlikely.");
+  if (hrs > 110) w.push("That's more than \"a few hours a day\", so this mix would mean more time than planned, or a lower tier in some options.");
   if (thin) w.push("At least one choice uses a tier with very thin evidence.");
   w.push("Totals mix sales (baking) with net income (the others), so the real take-home pay is lower than this.");
   document.getElementById("hoursWarn").innerHTML = w.join(" ");
