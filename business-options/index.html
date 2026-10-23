@@ -187,6 +187,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 #v-earn .measure, #v-earn .evtext, #v-earn .driver, #v-earn .tiernote, #v-earn .warn, #v-earn .legend { font-size: .92rem; }
 #v-earn .eyebrow, #v-earn .badge { font-size: .85rem; }
 #v-earn .seg button { min-height: 48px; font-size: 1rem; }
+/* On a phone the tier and year buttons fill the screen at large text sizes, so they scroll away with the page. */
+#v-earn .controls { position: static; gap: 12px; }
+#v-earn .sub { font-family: var(--body); }
+#v-earn .seg { display: flex; }
+#v-earn .seg button { flex: 1 1 auto; padding: 8px 10px; }
 #v-earn select { min-height: 48px; font-size: 1rem; }
 #v-earn .wrap { padding: 0; max-width: none; }
 #v-earn h1 { border: 0; padding: 0; }
