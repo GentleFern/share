@@ -138,6 +138,9 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 #v-earn .seg button { font: 600 .95rem var(--font-body); color: var(--fg); background: transparent; border: 0; padding: 8px 14px; cursor: pointer; border-right: 1px solid var(--line); }
 #v-earn .seg button:last-child { border-right: 0; }
 #v-earn .seg button[aria-pressed="true"] { background: var(--accent); color: var(--accent-fg); }
+#v-earn .seg button small { display: block; font-weight: 400; font-size: .72rem; opacity: .8; }
+#v-earn .assume { font-size: .9rem; color: var(--muted); max-width: 75ch; }
+#v-earn .assume strong { color: var(--fg); }
 #v-earn .seg button:focus-visible, #v-earn select:focus-visible, #v-earn a:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 #v-earn .tiernote { font-size: .9rem; color: var(--muted); max-width: 60ch; }
 #v-earn .tcards { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; }
@@ -217,9 +220,9 @@ body { margin: 0; }
   <h1>Your own small business: some options</h1>
   <p>Four kinds of work you could do on your own: selling your baking, making videos, earning from Amazon links, and selling used books. This page gives a short look at each, then what each could pay if you get good at it and how they fit together.</p><p>None of it is a plan to follow: pick one, try several, or set them all aside.</p>
   <h2>The options</h2>
-  <div class="cards"><a class="card opt-baking" href="#baking"><span class="dot"></span><span class="ct">Home baking</span><span class="cs">Grow the pre-orders you already take</span></a><a class="card opt-dogs" href="#dogs"><span class="dot"></span><span class="ct">Videos</span><span class="cs">Your dogs, your baking, or both</span></a><a class="card opt-amazon" href="#amazon"><span class="dot"></span><span class="ct">Amazon links</span><span class="cs">Small commissions on products in your videos</span></a><a class="card opt-books" href="#books"><span class="dot"></span><span class="ct">Used books</span><span class="cs">A treasure hunt that pays for your hours</span></a></div>
+  <div class="cards"><a class="card opt-baking" href="#baking"><span class="dot"></span><span class="ct">Home baking</span><span class="cs">Grow the pre-orders you already take</span></a><a class="card opt-dogs" href="#dogs"><span class="dot"></span><span class="ct">Videos</span><span class="cs">Your dogs, your baking, or both</span></a><a class="card opt-amazon" href="#amazon"><span class="dot"></span><span class="ct">Amazon links</span><span class="cs">Small commissions on products in your videos</span></a><a class="card opt-books" href="#books"><span class="dot"></span><span class="ct">Used books</span><span class="cs">A treasure hunt where pay grows with what you learn</span></a></div>
   <h2>Side by side</h2>
-  <div class="crow"><h3>Start-up cost</h3><ul class="cl"><li class="opt-baking"><span class="dot"></span><span><b>Baking:</b> Under about $200</span></li><li class="opt-dogs"><span class="dot"></span><span><b>Videos:</b> About $0</span></li><li class="opt-amazon"><span class="dot"></span><span><b>Amazon:</b> $0</span></li><li class="opt-books"><span class="dot"></span><span><b>Books:</b> A few hundred dollars</span></li></ul></div><div class="crow"><h3>The day-to-day work</h3><ul class="cl"><li class="opt-baking"><span class="dot"></span><span><b>Baking:</b> Baking, labels, orders</span></li><li class="opt-dogs"><span class="dot"></span><span><b>Videos:</b> Filming; family can edit and upload</span></li><li class="opt-amazon"><span class="dot"></span><span><b>Amazon:</b> Choosing products</span></li><li class="opt-books"><span class="dot"></span><span><b>Books:</b> Hunting, listing, shipping</span></li></ul></div><div class="crow"><h3>Grows over time?</h3><ul class="cl"><li class="opt-baking"><span class="dot"></span><span><b>Baking:</b> Through repeat customers and word of mouth</span></li><li class="opt-dogs"><span class="dot"></span><span><b>Videos:</b> Slowly, if videos keep getting found</span></li><li class="opt-amazon"><span class="dot"></span><span><b>Amazon:</b> Slowly, with steady videos</span></li><li class="opt-books"><span class="dot"></span><span><b>Books:</b> Only while you keep restocking</span></li></ul></div>
+  <div class="crow"><h3>Start-up cost</h3><ul class="cl"><li class="opt-baking"><span class="dot"></span><span><b>Baking:</b> Under about $200, plus about $300 a year for insurance once you sell in public</span></li><li class="opt-dogs"><span class="dot"></span><span><b>Videos:</b> About $0</span></li><li class="opt-amazon"><span class="dot"></span><span><b>Amazon:</b> $0</span></li><li class="opt-books"><span class="dot"></span><span><b>Books:</b> A few hundred dollars</span></li></ul></div><div class="crow"><h3>The day-to-day work</h3><ul class="cl"><li class="opt-baking"><span class="dot"></span><span><b>Baking:</b> Baking, labels, orders</span></li><li class="opt-dogs"><span class="dot"></span><span><b>Videos:</b> Filming; family can edit and upload</span></li><li class="opt-amazon"><span class="dot"></span><span><b>Amazon:</b> Choosing products</span></li><li class="opt-books"><span class="dot"></span><span><b>Books:</b> Hunting, listing, shipping</span></li></ul></div><div class="crow"><h3>Grows over time?</h3><ul class="cl"><li class="opt-baking"><span class="dot"></span><span><b>Baking:</b> Through repeat customers and word of mouth</span></li><li class="opt-dogs"><span class="dot"></span><span><b>Videos:</b> Slowly, if videos keep getting found</span></li><li class="opt-amazon"><span class="dot"></span><span><b>Amazon:</b> Slowly, with steady videos</span></li><li class="opt-books"><span class="dot"></span><span><b>Books:</b> Only while you keep restocking</span></li></ul></div>
   <p class='note'>For what each could pay as you build skill over two years, see Explore. The figures are estimates, and the first months are mostly for learning.</p>
   <a class="card tlink" href="#earn"><span class="dot"></span><span class="ct">Explore</span><span class="cs">What each could pay if you get good at it, and how they fit together</span></a>
 </section>
@@ -230,14 +233,15 @@ body { margin: 0; }
 
 <div class="wrap">
   <header style="display:grid; gap:10px">
-    <div class="eyebrow">Your income options · skilled and persistent</div>
+    <div class="eyebrow">Your income options</div>
     <h1>If you get good at it</h1>
-    <p class="lead">What each option could pay <strong>after two years of building real skill</strong>, from the middle (top 50%) to the top 1%. These are ranges, not forecasts. Each card's badge shows how much evidence is behind it; above the top 10% it gets thin.</p>
+    <p class="lead">What each option could pay <strong>after two years of building real skill</strong>, from a typical result for someone who sticks with it, up to the rare best cases. These are ranges, not forecasts. Each card's badge shows how much evidence is behind it; above the "Very good" level it gets thin.</p>
+    <p class="assume"><strong>Time assumed:</strong> home baking 60–80 hours a month, videos about 30 hours a month of filming (with family help on editing), used books about 40 hours a month, and Amazon links a few hours a month on top of videos. All figures are before income tax.</p>
   </header>
 
   <div class="controls" role="group" aria-label="View settings">
     <div class="control">
-      <span class="eyebrow" id="tierLbl">Among skilled, persistent people</span>
+      <span class="eyebrow" id="tierLbl">Level, among skilled, persistent people</span>
       <div class="seg" id="tierSeg" aria-labelledby="tierLbl"></div>
     </div>
     <div class="control">
@@ -250,42 +254,42 @@ body { margin: 0; }
   <section class="tcards" id="cards" aria-live="polite"></section>
 
   <section class="panel">
-    <h2>All tiers on one scale</h2>
-    <p class="warn">Each bar spans the low-to-high estimate. The scale is logarithmic, so every gridline is ten times the one before it. The highlighted bar is the tier you picked.</p>
-    <div class="chartbox"><svg id="ladder" role="img" aria-label="Range of yearly earnings by tier for each option"></svg></div>
-    <div class="legend"><span>Baking shows sales. Videos and Amazon show direct income. Books show net profit.</span></div>
+    <h2>All levels on one scale</h2>
+    <p class="warn">Each bar spans the low-to-high estimate. Each gridline is ten times the last. The highlighted bar is the level you picked.</p>
+    <div class="chartbox"><svg id="ladder" role="img" aria-label="Range of yearly earnings by level for each option"></svg></div>
+    <div class="legend"><span>Baking shows sales. Videos and Amazon links show income. Used books show profit after costs.</span></div>
   </section>
 
   <section class="panel">
     <h2>Combine options for Year 2</h2>
     <div class="combine" id="combine"></div>
-    <div class="total"><span class="eyebrow">Combined Year 2</span><span class="range" id="total"></span></div>
+    <div class="total"><span class="eyebrow">Combined Year 2 sales and income, not take-home pay</span><span class="range" id="total"></span></div>
     <p class="warn" id="hoursWarn"></p>
   </section>
 
   <section class="panel" id="after">
     <h2>After Year 2</h2>
-    <p class="warn">There are no dollar figures past Year 2 on purpose. The evidence there is too thin to put numbers on. What can be said is what keeps building, what levels off, and what you'd get to decide. By then, your own Year 1 and Year 2 results will be better evidence than any survey.</p>
+    <p class="warn">There are no dollar figures past Year 2 on purpose. The evidence there is too thin to put numbers on. What can be said is what keeps building, what levels off, and what bigger steps involve. By then, your own Year 1 and Year 2 results will be better evidence than any survey.</p>
     <div class="tcards">
       <article class="tcard"><h3>Home baking</h3>
         <p class="takes"><strong>Keeps building:</strong> repeat customers, word of mouth, and the prices your reputation supports.</p>
         <p class="takes"><strong>Levels off:</strong> once your hours are full. Working alone, that's somewhere around $25k–40k a year in sales.</p>
-        <p class="takes"><strong>Your choice:</strong> stay at a size you enjoy, take on a helper, or move to a licensed kitchen ($3k–7k a year) to sell wholesale. A storefront is a different business. About 55% of new food businesses are still open after five years.</p>
+        <p class="takes"><strong>Bigger steps:</strong> a helper, or a licensed kitchen ($3k–7k a year) to sell wholesale. A storefront is a different business; about 55% of new restaurants, cafés and other food businesses are still open after five years (US Bureau of Labor Statistics).</p>
         <span class="badge ev-weak">Weak evidence, but the limits are known</span></article>
       <article class="tcard"><h3>Videos</h3>
         <p class="takes"><strong>Keeps building:</strong> older how-to videos that people find through search keep bringing in views for years, along with customers for anything else you sell.</p>
-        <p class="takes"><strong>Levels off:</strong> hard to predict. Platforms changed their pay rules four times in 2026, and studies that track creators over several years only follow the ones who stayed.</p>
-        <p class="takes"><strong>Your choice:</strong> keep it for fun, use it to promote anything else you sell, or treat it as a second income if Year 2 shows real growth.</p>
+        <p class="takes"><strong>Levels off:</strong> hard to predict. YouTube announced new pay rules in 2026, paying less for short videos and raising the bar for new channels. Studies that follow creators over several years only track the ones who stayed.</p>
+        <p class="takes"><strong>Bigger steps:</strong> a regular posting schedule and active brand pitching, the pattern behind channels that grow into a second income.</p>
         <span class="badge ev-spec">Speculative</span></article>
       <article class="tcard"><h3>Amazon links</h3>
         <p class="takes"><strong>Keeps building:</strong> links in older videos keep earning while the products are still sold.</p>
         <p class="takes"><strong>Levels off:</strong> it moves up or down with your video audience, and with Amazon's rates. Amazon cut those rates in 2020 and again in 2026.</p>
-        <p class="takes"><strong>Your choice:</strong> add it as a small extra alongside videos, or leave it out.</p>
+        <p class="takes"><strong>Bigger steps:</strong> the Influencer Program's product videos, or flat-fee pet programs that pay about $15–60 per new customer.</p>
         <span class="badge ev-spec">Speculative</span></article>
       <article class="tcard"><h3>Used books</h3>
         <p class="takes"><strong>Keeps building:</strong> your knowledge, which raises what you earn per hour up to a point.</p>
         <p class="takes"><strong>Levels off:</strong> income doesn't build on itself. Year 3 looks like Year 2 unless you add hours. The work also involves carrying boxes of books.</p>
-        <p class="takes"><strong>Your choice:</strong> keep it if you enjoy the hunt, narrow to a specialty, or move those hours to something else.</p>
+        <p class="takes"><strong>Bigger steps:</strong> a specialty, or having Amazon store and ship your books (FBA), with about $500–1,000 of working capital.</p>
         <span class="badge ev-weak">Weak evidence</span></article>
     </div>
   </section>
@@ -294,24 +298,21 @@ body { margin: 0; }
     <summary>How these ranges were built, and what they can't tell you</summary>
     <ul>
       <li><strong>Who they describe:</strong> people who keep at it for at least two years, improve, price sensibly and adjust from their own numbers. They are not the averages across everyone who tries.</li>
-      <li><strong>Top 50% to 10%:</strong> built from the four research reports' cost and income models (home baking, dog social media, Amazon affiliate, used books) plus population anchors. Examples: 95% of Minnesota cottage producers expect under $7,665 a year in sales, and 30.8% of small YouTube channels with 52+ uploads crossed 1,000 subscribers in a year.</li>
-      <li><strong>Top 5% and 1%:</strong> no dataset measures these groups. They mark the edge of what the models allow (your hours, the $78k cottage cap, platform pay rates), checked against the few upper-tail cases on record. For the videos, the top 1% depends mostly on luck.</li>
+      <li><strong>Typical to Very good:</strong> worked out from real costs, prices, fees and time for each option, then checked against what is known about real sellers. For example, in 2024 about 95% of Minnesota home bakers registered for the smallest tier, which expects under $7,665 a year in sales. And of small YouTube channels that posted 52 or more videos in a year, about 31% passed 1,000 subscribers.</li>
+      <li><strong>Exceptional and Rare:</strong> nobody publishes numbers for these groups. They show the most the arithmetic allows, given your hours, the home-baking sales limit (about $78k a year under the rules starting August 2027) and what platforms pay, checked against the few success stories on record. For videos, the Rare level depends a lot on luck.</li>
       <li><strong>Year 1</strong> is your first full year once you start in earnest, with a few hours a day from the start. That makes it a ramp-up year. <strong>Year 2</strong> is the year after. All figures are before income and self-employment tax.</li>
-      <li>Full reasoning and sources: <a href="https://claude.ai/artifact/7rFUVhAhGAZdZ79bTSY9kw" target="_blank" rel="noopener">the full write-up</a>. New sources: <a href="https://www.bls.gov/opub/ted/2024/34-7-percent-of-business-establishments-born-in-2013-were-still-operating-in-2023.htm" target="_blank" rel="noopener">BLS business survival</a>, <a href="https://air.io/en/air-data-findings/which-youtube-niche-makes-the-most-money-in-2026-ranked-by-real-rpm-and-cpm" target="_blank" rel="noopener">AIR Media-Tech YouTube pay by niche</a>, <a href="https://findhomegrown.com/blog/how-to-get-your-food-into-a-local-coffee-shop" target="_blank" rel="noopener">Homegrown wholesale pricing</a>, <a href="https://www.escoffier.edu/blog/baking-pastry/how-much-does-it-cost-to-open-a-bakery/" target="_blank" rel="noopener">Escoffier bakery costs</a>.</li>
     </ul>
   </details>
 </div>
 
 
-  <div class="together"><h2>How they fit together</h2><p class="lede">What the figures above don't show: how the options can help each other, the dates that matter, when to stop, and a few ways it could go. None of it is a plan you have to follow.</p><details id="t-0"><summary>How they help each other</summary><div class="db"><ul>
+  <div class="together"><h2>How they fit together</h2><p class="lede">What the figures above don't show: how the options can help each other, the dates that matter, when to stop, and a few ways it could go.</p><details id="t-0"><summary>How they help each other</summary><div class="db"><ul>
 <li><strong>Dogs and baking.</strong> Videos and photos of your dogs with your finished baking, and a small line of dog treats, connect the two. The same home-baking registration covers baked dog treats, and they're the only home-made food you may mail before August 2027.</li>
 <li><strong>A simple video format.</strong> Show finished treats with the dogs in the living room or yard. MDA's rules keep pets out of the kitchen while you bake to sell, so bake on camera only for practice batches you won't sell.</li>
 <li><strong>Dogs and Amazon.</strong> Amazon links only earn once your videos have regular viewers. Then links to the harness, bed or toys your dogs actually use can earn small commissions.</li>
-<li><strong>Books stand alone.</strong> Specialist cookbooks may suit you, since you know baking, but the research didn't test them.</li>
+<li><strong>Books stand alone.</strong> Specialist cookbooks are one niche worth a look, since you know baking; check sold prices before buying.</li>
 </ul></div></details><details id="t-1"><summary>Dates worth knowing</summary><div class="db"><ul>
-<li><strong>Now, since you already take pre-orders:</strong> check that you're registered, that every package has the required label, and that your city allows pickup at home.</li>
-<li><strong>Before your first public sale:</strong> liability insurance, about $300 a year.</li>
-<li><strong>February 2027:</strong> YouTube's new rules start. New channels need 1,000 subscribers and 8,000 hours of viewing in a year before ads pay.</li>
+<li><strong>February 2027:</strong> YouTube's new rules start. New channels need 1,000 subscribers and 8,000 hours of viewing in a year (up from 4,000) before ads pay.</li>
 <li><strong>By April 1 each year:</strong> retake the free home-baking course and renew your registration.</li>
 <li><strong>August 1, 2027:</strong> Minnesota's new home-baking rules. Everyone pays $30 a year and takes a new course, and you may ship within Minnesota.</li>
 <li><strong>By September:</strong> apply to holiday fairs, as they fill early.</li>
@@ -320,9 +321,8 @@ body { margin: 0; }
 <li><strong>Try two for a season, then choose.</strong> Give each a few months and compare them in a yearly review.</li>
 <li><strong>Focus on one.</strong> Pick whichever appeals most and leave the rest aside.</li>
 <li><strong>One main, others around it.</strong> For example, baking with dog videos that show off the treats, or videos with Amazon links once they have viewers.</li>
-<li><strong>Something else entirely.</strong> If none of these fits, that's a fine answer too.</li>
 </ul></div></details><details id="t-3"><summary>Time and stopping points</summary><div class="db"><p>Several ventures can fill every free hour, so some people set a limit for each before they start. These are common points where people change course:</p>
-<div class="tw"><table><thead><tr><th>If…</th><th>Some people then…</th></tr></thead><tbody><tr><td>A market season pays under about $5 an hour</td><td>Keep the custom orders it brought and drop the market</td></tr><tr><td>After a year, videos get few views and filming isn't fun</td><td>Stop, or film only for fun</td></tr><tr><td>Amazon links earn under $10 a month after a year</td><td>Keep them only on videos they'd make anyway</td></tr></tbody></table></div></div></details><details id="t-4"><summary>Good rules for whichever you choose</summary><div class="db"><h4>A yearly review</h4>
+<div class="tw"><table><thead><tr><th>If…</th><th>Some people then…</th></tr></thead><tbody><tr><td>A market season pays under about $5 an hour</td><td>Keep the custom orders it brought and drop the market</td></tr><tr><td>After a year, videos get few views and filming isn't fun</td><td>Stop, or film only for fun</td></tr><tr><td>Amazon links earn under $10 a month after a year</td><td>Keep them only on videos they'd make anyway</td></tr></tbody></table></div></div></details><details id="t-4"><summary>Worth knowing for any of them</summary><div class="db"><h4>A yearly review</h4>
 <p>Once a year, write down for each thing you're doing:</p>
 <ol>
 <li>Hours spent, money spent, money in, and free products received.</li>
@@ -330,13 +330,12 @@ body { margin: 0; }
 <li>Is it growing: more repeat customers, more views, more sales?</li>
 <li>Keep, change, or stop?</li>
 </ol>
-<h4>Rules that apply to all four</h4>
+<h4>Money, tax and benefits</h4>
 <ul>
-<li><strong>Never pay for a business course or "system".</strong> Free training is enough. The only course you pay for is the state's home-baking course, from August 2027.</li>
-<li><strong>Take payment before you bake, and never refund an "overpayment".</strong> Real brands never ask creators for money.</li>
-<li><strong>Keep one folder for all of it.</strong> Receipts, a notebook of sales, a mileage log and a list of free products with their values. Take it to a tax preparer each January. Profit from everything together is taxable, and self-employment tax applies once it reaches $400 a year.</li>
-<li><strong>Before you claim Social Security:</strong> if you claim before your full retirement age, earnings above $25,560 in 2027 reduce your benefit. These ventures are unlikely to reach that, but check.</li>
-<li><strong>Say when you were paid or given something</strong>, in every video.</li>
+<li><strong>One folder for all of it.</strong> Receipts, a notebook of sales, a mileage log (the IRS rate is 76¢ a mile from July 2026) and a list of free products with their values. A tax preparer can sort it each January.</li>
+<li><strong>All of it is taxable</strong>, even when no tax form arrives, and free products count at their value. Reporting it as a small business (Schedule C) lets you deduct costs such as ingredients, books, fees, postage and mileage. Self-employment tax, about 14% of profit, applies once profit from everything together reaches $400 a year.</li>
+<li><strong>Benefits.</strong> If you receive Social Security before full retirement age, or other benefits, earnings rules may apply. In 2027, earnings above $25,560 reduce a benefit claimed early.</li>
+<li><strong>Free training is enough.</strong> None of these needs a paid course, "system" or done-for-you store.</li>
 </ul></div></details></div>
 </section>
 
@@ -351,8 +350,8 @@ body { margin: 0; }
 <li><strong>Money:</strong> under about $200 to start, plus about $300 a year for liability insurance before you sell in public.</li>
 <li><strong>Time:</strong> as much as you choose. Orders come in bursts: holidays, graduations, Valentine's Day. January to March is slow.</li>
 </ul>
-<p><strong>What it might bring.</strong> In the typical cases modelled, about $8 to $13 an hour before tax. Orders from people you know come to about $136 profit a month; a summer market or decorated-cookie orders can bring more, once you have the customers. A baker who already has customers starts ahead of the typical home seller.</p>
-<p><strong>Does it grow?</strong> We expect it to, through repeat customers, word of mouth and photos of your work; the research doesn't measure how fast.</p>
+<p><strong>What it might bring.</strong> Typically about $8 to $13 an hour before tax. Orders from people you know come to about $136 profit a month; a summer market or decorated-cookie orders can bring more, once you have the customers. A baker who already has customers starts ahead of the typical home seller.</p>
+<p><strong>Does it grow?</strong> Yes, mostly through repeat customers, word of mouth and photos of your work.</p>
 <p><strong>Worth checking now, since you already take pre-orders:</strong> that you're registered with MDA, that every package carries the required label ("These products are homemade and not subject to state inspection."), and that your city allows customers to pick up at your home.</p>
   <div class="pair"><a class="next" href="#guide-baking">Read the full baking guide</a>
   <a class="next ghost" href="#dogs">Next option: Videos</a></div>
@@ -363,20 +362,20 @@ body { margin: 0; }
   <p class="eyebrow"><span class="dot"></span>Option 2 of 4</p>
   <h1>Videos</h1>
   <p class="lede">Filming your dogs, your baking, both, or everyday life, and posting videos people can find.</p>
-<p><strong>What it is.</strong> Making videos and posting them, mainly on YouTube. You could film your dogs, your baking, both, or everyday life; the trade-offs are below.</p>
+<p><strong>What it is.</strong> Making videos and posting them, mainly on YouTube.</p>
 <p><strong>What it takes</strong></p>
 <ul>
 <li><strong>Money:</strong> about $0. A $20 to $40 clip-on microphone is optional.</li>
 <li><strong>Time:</strong> about 3 to 5 hours a week for dog clips; baking videos take more, because each needs a planned bake, a clean, well-lit counter and shots of each step.</li>
 <li><strong>Skills to learn:</strong> filming well on a phone, and editing if you do it yourself. The "Getting set up" guide covers camera settings, light and sound, and the YouTube and TikTok accounts.</li>
 </ul>
-<p><strong>What it might bring.</strong> Most new channels earn nothing to a few hundred dollars in their first year. YouTube pays ad money only once a channel reaches 1,000 subscribers and 8,000 hours of viewing in a year. Of small channels that post every week for a year, about three in ten get past 1,000 subscribers. Once a channel qualifies, YouTube pays roughly $1.50 to $3 per 1,000 views for most topics, food included. The first money usually comes from free products, small paid posts, and links to products you use.</p>
+<p><strong>What it might bring.</strong> Most new channels earn nothing to a few hundred dollars in their first year. YouTube pays ad money only once a channel reaches 1,000 subscribers and, from February 2027, 8,000 hours of viewing in a year (up from 4,000). Once a channel qualifies, YouTube pays roughly $1 to $6 per 1,000 views, most topics around $1.50 to $3, food included. The first money usually comes from free products, small paid posts, and links to products you use.</p>
 <p><strong>Does it grow?</strong> It can keep earning from past work. People search for recipes, often at the same season every year, so a good baking video can keep being found; dog clips mostly get their views in the first days. It's a long-term bet: judge it after a year, not a month.</p>
 <p><strong>What you could film</strong></p>
 <ul>
 <li><strong>Your dogs:</strong> the least work, since you film ordinary life. People find these mostly through the app's feed, and soon after posting. Extra income: pet brands, or licensing a clip.</li>
 <li><strong>Your baking:</strong> the most work, since each video is a planned bake. People search for recipes, often every year at the same season. Extra income: kitchen product links, a recipe blog, and local customers.</li>
-<li><strong>Baking, with the dogs as a cast:</strong> two setups, since pets stay out of the kitchen while you bake to sell. Found both ways, with both kinds of sponsor.</li>
+<li><strong>Baking, with the dogs as a cast:</strong> two setups, since pets stay out of the kitchen while you bake to sell. Found through search and the feed; pet and kitchen brands may both be interested.</li>
 <li><strong>Everyday life:</strong> medium work. Found by subscribers and the feed, rarely by search, so it's the hardest to grow.</li>
 </ul>
 <p>Baking videos could also bring local customers to your pre-orders, even if the channel never earns ad money.</p>
@@ -398,7 +397,7 @@ body { margin: 0; }
 <li><strong>Time:</strong> a little per video, once the videos exist.</li>
 <li><strong>An audience first.</strong> Amazon closes your account if you don't make three sales within 180 days of joining, so videos come first.</li>
 </ul>
-<p><strong>What it might bring.</strong> Near $0 in the first year. After a year or two of steady videos, ten to a few hundred dollars a month is plausible. Pet products pay 3%, so a typical $45 order earns about $1.35.</p>
+<p><strong>What it might bring.</strong> Near $0 in the first year, and typically $25 to $250 a year by the second. A few hundred dollars a month needs a large audience. Pet products pay 3%, so a typical $45 order earns about $1.35.</p>
 <p><strong>Does it grow?</strong> Slowly, and only while you keep posting videos people watch. It's an add-on to videos, not a business on its own.</p>
 <p><strong>Watch out for:</strong> "five-star review for a refund" offers, which break Amazon's rules, and fake "Amazon support" messages asking for your password. Free products count as taxable income.</p>
 <p><strong>One easy way to try it:</strong> if you make videos, mention the products your dogs really use. Joining makes sense once the videos have regular viewers.</p>
@@ -410,7 +409,7 @@ body { margin: 0; }
   <a class="back" href="#home">All options</a>
   <p class="eyebrow"><span class="dot"></span>Option 4 of 4</p>
   <h1>Used books</h1>
-  <p class="lede">A treasure hunt that pays for the hours you put in.</p>
+  <p class="lede">A treasure hunt where pay grows with what you learn.</p>
 <p><strong>What it is.</strong> Buying books cheaply at thrift stores, library sales and yard sales, and selling the few worth more online, mostly on eBay. The money is in a minority of books: textbooks, specialist nonfiction and older out-of-print titles.</p>
 <p><strong>What it takes</strong></p>
 <ul>
@@ -418,9 +417,9 @@ body { margin: 0; }
 <li><strong>Time:</strong> about 7 hours a week in the typical case.</li>
 <li><strong>Other:</strong> a car, dry storage space, a smartphone, and a way to print shipping labels.</li>
 </ul>
-<p><strong>What it might bring.</strong> The first three months usually earn less, because you buy books before they sell. After that, a typical month is about $220, or about $7 an hour; a good month about $760.</p>
+<p><strong>What it might bring.</strong> The first three months usually earn less, because you buy books before they sell. After that, a typical first-year month is about $220, or about $7 an hour, and a good one about $760. It rises with experience.</p>
 <p><strong>Does it grow?</strong> Your skill does, and a book can keep selling for weeks or months after you list it. But the income stops when you stop restocking.</p>
-<p><strong>One easy way to try it:</strong> list five of your own books on eBay. Or scan 200 books at one thrift store with the free BookScouter app, note which would have made $5, and buy nothing.</p>
+<p><strong>One easy way to try it:</strong> list five of your own books on eBay.</p>
   <div class="pair"><a class="next" href="#guide-books">Read the full books guide</a>
   <a class="next ghost" href="#baking">Next option: Home baking</a></div>
 </section>
@@ -443,25 +442,24 @@ body { margin: 0; }
   <p class="eyebrow">Read when you're ready</p>
   <h1>The full guides</h1>
   <p>Each guide starts with a one-minute summary. Tap a heading to open it. Tick the checklist boxes as you go; this phone remembers them.</p>
-  <div class="cards"><a class="card opt-baking" href="#guide-baking"><span class="dot"></span><span class="ct">Home baking</span><span class="cs">The full beginner's guide</span></a><a class="card opt-dogs" href="#guide-dogs"><span class="dot"></span><span class="ct">Videos</span><span class="cs">The full beginner's guide</span></a><a class="card opt-amazon" href="#guide-amazon"><span class="dot"></span><span class="ct">Amazon links</span><span class="cs">The full beginner's guide</span></a><a class="card opt-books" href="#guide-books"><span class="dot"></span><span class="ct">Used books</span><span class="cs">The full beginner's guide</span></a><a class="card opt-dogs" href="#guide-setup"><span class="dot"></span><span class="ct">Getting set up</span><span class="cs">Your iPhone camera, YouTube and TikTok</span></a></div>
+  <div class="cards"><a class="card opt-baking" href="#guide-baking"><span class="dot"></span><span class="ct">Home baking</span><span class="cs">Registration, labels, pricing</span></a><a class="card opt-dogs" href="#guide-dogs"><span class="dot"></span><span class="ct">Videos</span><span class="cs">Platforms, filming, first money</span></a><a class="card opt-amazon" href="#guide-amazon"><span class="dot"></span><span class="ct">Amazon links</span><span class="cs">Joining, links, disclosure</span></a><a class="card opt-books" href="#guide-books"><span class="dot"></span><span class="ct">Used books</span><span class="cs">Spotting, listing, shipping</span></a><a class="card opt-dogs" href="#guide-setup"><span class="dot"></span><span class="ct">Getting set up</span><span class="cs">Your iPhone camera, YouTube and TikTok</span></a></div>
 </section>
 
 <section class="view guide opt-baking" id="v-guide-baking" data-view="guide-baking" hidden>
   <a class="back" href="#guides">All guides</a>
   <p class="eyebrow"><span class="dot"></span>Full guide</p>
   <h1>Selling your baking from home in Minnesota: a beginner's guide</h1>
-  <p class="lede">For you if you already bake cupcakes and cookies well, take some pre-orders, and live in Minnesota, and want to grow that into your own small business over the next year or two. Figures and rules are as of October 2026. The law changes on August 1, 2027, so check the Minnesota Department of Agriculture's (MDA's) cottage food page again in spring 2027.</p>
+  <p class="lede">Figures and rules are as of October 2026. The law changes on August 1, 2027, so check the Minnesota Department of Agriculture's (MDA's) cottage food page again in spring 2027.</p>
   <details id="d-baking-0" open><summary>In one minute</summary><div class="db"><ul>
 <li><strong>Minnesota lets you sell home baking legally</strong> under its "cottage food" law, with a short course and a registration, and without a license or routine kitchen inspection.</li>
 <li><strong>Today it's free</strong> if you sell $7,665 or less a year. From August 2027 everyone pays $30 a year and takes a new course of up to eight hours every three years, and you'll be allowed to ship within Minnesota.</li>
 <li><strong>Most cookies, bars, cupcakes and cakes are allowed.</strong> Anything that needs the fridge to stay safe isn't: whipped cream, custard fillings, cheesecake, fresh-fruit toppings.</li>
 <li><strong>Start-up cost is under about $200</strong>, plus about $300 a year for insurance before selling in public.</li>
-<li><strong>It pays like a small business</strong>: about $8 to $13 an hour in typical cases, less in a slow week. We expect it to grow as customers come back and tell friends; the research doesn't measure how fast.</li>
+<li><strong>It pays like a small business</strong>: about $8 to $13 an hour in typical cases, less in a slow week. It grows as customers come back and tell friends.</li>
 <li><strong>Keep the dogs and cats out of the kitchen while you bake</strong>; MDA's rules require it.</li>
-</ul></div></details><details id="d-baking-1"><summary>What to expect</summary><div class="db"><p>In a 2016 national survey, the typical registered home food seller made $2,000 of sales and $500 of profit a year, working about 15 hours a week. About 95% of Minnesota's registered sellers are in the free small tier. A skilled baker with friends, coworkers and a church to sell to starts ahead of that.</p>
-<p>These monthly figures are modelled, before income and self-employment tax:</p>
+</ul></div></details><details id="d-baking-1"><summary>What to expect</summary><div class="db"><p>Typical monthly figures, before income and self-employment tax:</p>
 <div class="tw"><table><thead><tr><th>How you sell</th><th>Typical month</th><th>Hours</th><th>Per hour</th></tr></thead><tbody><tr><td>Orders from people you know (a few hours a week)</td><td>about $136 profit</td><td>14</td><td>about $10</td></tr><tr><td>One weekly summer farmers market</td><td>about $459 profit</td><td>57</td><td>about $8</td></tr><tr><td>Decorated-cookie custom orders (with more time)</td><td>about $765 profit</td><td>60</td><td>about $13</td></tr></tbody></table></div>
-<p>A slow market month pays little; a good month of decorated orders about $17 an hour. Orders pay best. A market's real value in the first season is finding customers who'll order later. January to March is slow; graduations, holidays and Valentine's Day are busy.</p>
+<p>A slow market month pays little; a good month of decorated orders about $17 an hour. Orders pay best. For context, a 2016 national survey found the typical registered home food seller made $500 profit a year, and about 95% of Minnesota's registered sellers are in the free small tier; a baker who already has customers starts ahead of that. A market's real value in the first season is finding customers who'll order later. January to March is slow; graduations, holidays and Valentine's Day are busy.</p>
 <p>Decorated-cookie orders depend on reputation: word of mouth and photos of your work. Decorated cookies were the top seller by volume in a 2021 survey of home bakers.</p></div></details><details id="d-baking-2"><summary>What you need</summary><div class="db"><ul>
 <li>Your kitchen, with a way to keep pets out (a door or baby gate).</li>
 <li>Your Social Security number, for the registration.</li>
@@ -494,14 +492,12 @@ body { margin: 0; }
 <p><strong>Step 3. Price your three or four best products.</strong> Add up ingredients and packaging per dozen, then your time. Plain cookies cost about $3 to $5.50 a dozen in materials, frosted cupcakes $7 to $9, decorated sugar cookies $5 to $9. Suggested Minnesota prices: plain cookies $12 to $24 a dozen, simply frosted cupcakes $24 to $36, themed cupcakes $36 to $48, decorated cookies $40 to $60. Small towns sit at the low end, Twin Cities suburbs at the high end. In one survey, plain cookies tied for the best profit per item, and cupcakes faced the most competition; decorated cookies bring the most per dozen but take hours.</p>
 <p><strong>Step 4. Grow the pre-orders you already take (holidays 2026 to spring 2027).</strong> Cookie trays, birthdays, graduations, showers. Most growth comes from happy customers telling friends, and from photos of your best work. Set a minimum order and keep a record of every order.</p>
 <p><strong>Step 5. Before your first public sale (spring 2027).</strong> Buy product liability insurance, about $300 a year. Your homeowner's policy almost certainly doesn't cover a home business, so tell your agent about the baking, and about customers coming to a house with four dogs. Apply early to one farmers market or holiday fair; fairs fill by early autumn. Markets will ask you to sign Form ST19 saying you sell nothing taxable.</p>
-<p><strong>Step 6. When you have more time.</strong> If you want more customers, one weekly market is a way to meet people who'll order later. If sales will pass $7,665 before August, move up to Tier 2 (a $50 fee plus a $50 course). From August 1, 2027, register under the single $30 tier and take the new course.</p>
+<p><strong>Step 6. If you want to grow.</strong> If you want more customers, one weekly market is a way to meet people who'll order later. If sales will pass $7,665 before August, move up to Tier 2 (a $50 fee plus a $50 course). From August 1, 2027, register under the single $30 tier and take the new course.</p>
 <p><strong>Step 7. Look at your own numbers (after a season or two).</strong> They show what paid best and what you enjoyed most: decorated-cookie orders, a market, cookies shipped within Minnesota, or a dog-treat line.</p></div></details><details id="d-baking-5"><summary>What you may and may not sell</summary><div class="db"><div class="tw"><table><thead><tr><th>Allowed</th><th>Only with a tested recipe</th><th>Not allowed</th></tr></thead><tbody><tr><td>Cookies, bars, brownies, cupcakes, cakes</td><td>American, French vanilla and Swiss buttercreams</td><td>Fresh whipped cream</td></tr><tr><td>Royal icing with meringue powder</td><td>Cream cheese frosting (high-sugar recipe only)</td><td>Custard, pudding or cream fillings</td></tr><tr><td>Fondant, edible printed images</td><td>Ganache, caramel fillings</td><td>Tres leches, cheesecake</td></tr><tr><td>Fruit-filled pies</td><td>Carrot, pumpkin and banana cakes</td><td>Raw cookie dough, fresh-fruit garnish</td></tr></tbody></table></div>
-<p>The rule underneath: if it needs the fridge to stay safe, you can't sell it from home. Decorated sugar cookies with royal icing are clearly allowed.</p></div></details><details id="d-baking-6"><summary>Your kitchen, your dogs and cats</summary><div class="db"><p>MDA's training says: "Your Pets Cannot Help Make the Treats." Pets must stay out of the kitchen while you bake to sell, and the counters need sanitizing if one gets in. With four dogs, a door or baby gate on baking days, and pet bowls and beds kept in another room, make this easy. MDA also asks that you don't bake to sell if anyone at home has had a stomach bug in the last 72 hours.</p>
-<p>Pet hair in a cookie is the most likely complaint customers make about home bakers.</p></div></details><details id="d-baking-7"><summary>A treat line for your dogs' fans</summary><div class="db"><p>The same registration covers baked or dehydrated dog and cat treats, with the same label sentence. They're the only home-made food you may mail today; buyers in other states may bring that state's pet-food rules into play. Beyond the foods every dog owner avoids, MDA's training also bans hops, hemp, CBD and animal-based ingredients in treats you sell; egg-free recipes avoid any question. Bake them on separate days from people food. Your dogs make a believable story and photo subject, which links nicely with the dog-video idea.</p></div></details><details id="d-baking-8"><summary>Sales tax, income tax and Social Security</summary><div class="db"><ul>
-<li><strong>Sales tax:</strong> plain cookies, bars, cupcakes and cakes in a box or bag are exempt. If everything you sell is exempt, you don't need a sales-tax account. Napkins, forks or plates make the sale taxable, and so do candy and decorations sold alone.</li>
-<li><strong>Income tax:</strong> treat it as a small business from the first sale. Keep one envelope or folder for receipts, a notebook of sales, and a mileage log, and take it all to a tax preparer in January. Self-employment tax (15.3% on most of your profit, roughly 14% overall) applies once profit reaches $400 a year.</li>
-<li><strong>Social Security:</strong> if you claim before your full retirement age, earnings above $25,560 in 2027 reduce your benefit; the typical cases here are well below that.</li>
-</ul></div></details><details id="d-baking-9"><summary>First season: an if-then plan</summary><div class="db"><div class="tw"><table><thead><tr><th>If…</th><th>Then…</th></tr></thead><tbody><tr><td>Your city bans pickup at home</td><td>Deliver yourself, or hand orders over at a market</td></tr><tr><td>A stranger orders a large batch, avoids calls, or sends extra money</td><td>Treat it as a scam; decline</td></tr><tr><td>A customer wants cream-filled or fresh-fruit desserts</td><td>Say no, or offer an allowed version</td></tr><tr><td>A market season pays under $5 an hour</td><td>Many sellers keep the custom orders it brought and drop the market</td></tr><tr><td>Your 2027 sales look likely to pass $7,665 before August</td><td>Move up to Tier 2 first (a $50 fee plus a $50 course)</td></tr><tr><td>You feel rushed or underpaid</td><td>Raise prices and set a minimum order before saying yes to everything</td></tr></tbody></table></div></div></details><details id="d-baking-10"><summary>Checklist</summary><div class="db"><ul>
+<p>The rule underneath: if it needs the fridge to stay safe, you can't sell it from home. Decorated sugar cookies with royal icing are clearly allowed.</p></div></details><details id="d-baking-6"><summary>Your kitchen, your dogs and cats</summary><div class="db"><p>MDA's training says: "Your Pets Cannot Help Make the Treats." Pets must stay out of the kitchen while you bake to sell, and the counters need sanitizing if one gets in. With four dogs, a door or baby gate on baking days, and pet bowls and beds kept in another room, make this easy. MDA also asks that you don't bake to sell if anyone at home has had a stomach bug in the last 72 hours. Pet hair is the most common complaint about home bakers, which is why the rule exists.</p></div></details><details id="d-baking-7"><summary>A treat line for your dogs' fans</summary><div class="db"><p>The same registration covers baked or dehydrated dog and cat treats, with the same label sentence. They're the only home-made food you may mail today; buyers in other states may bring that state's pet-food rules into play. Beyond the foods every dog owner avoids, MDA's training also bans hops, hemp, CBD and treats of animal origin, such as liver or jerky. It doesn't say whether eggs count; MDA (651-201-6062) can confirm, or egg-free recipes avoid the question. Bake them on separate days from people food. Your dogs make a believable story and photo subject, which links nicely with the dog-video idea.</p></div></details><details id="d-baking-8"><summary>Sales tax</summary><div class="db"><ul>
+<li>Plain cookies, bars, cupcakes and cakes in a box or bag are exempt. If everything you sell is exempt, you don't need a sales-tax account. Napkins, forks or plates make the sale taxable, and so do candy and decorations sold alone.</li>
+<li>Income tax and benefits are the same for every option; see "Money, tax and benefits" under How they fit together.</li>
+</ul></div></details><details id="d-baking-9"><summary>First season: an if-then plan</summary><div class="db"><div class="tw"><table><thead><tr><th>If…</th><th>Then…</th></tr></thead><tbody><tr><td>Your city bans pickup at home</td><td>Deliver yourself, or hand orders over at a market</td></tr><tr><td>A stranger orders a large batch, avoids calls, or sends extra money</td><td>Treat it as a scam; decline</td></tr><tr><td>A customer wants cream-filled or fresh-fruit desserts</td><td>Say no, or offer an allowed version</td></tr><tr><td>Your 2027 sales look likely to pass $7,665 before August</td><td>Move up to Tier 2 first (a $50 fee plus a $50 course)</td></tr><tr><td>You feel rushed or underpaid</td><td>Raise prices and set a minimum order before saying yes to everything</td></tr></tbody></table></div></div></details><details id="d-baking-10"><summary>Checklist</summary><div class="db"><ul>
 <li class="check"><label><input type="checkbox" id="chk-1"><span>City hall called about home pickup</span></label></li>
 <li class="check"><label><input type="checkbox" id="chk-2"><span>Tier 1 course and test done; registered; card received</span></label></li>
 <li class="check"><label><input type="checkbox" id="chk-3"><span>Recipe binder with sources</span></label></li>
@@ -512,14 +508,14 @@ body { margin: 0; }
 <li class="check"><label><input type="checkbox" id="chk-8"><span>Insurance before the first market; homeowner's agent told</span></label></li>
 <li class="check"><label><input type="checkbox" id="chk-9"><span>Receipts envelope, sales notebook, mileage log</span></label></li>
 <li class="check"><label><input type="checkbox" id="chk-10"><span>Renewal by April 1; check MDA's page in spring 2027 for the new rules</span></label></li>
-</ul></div></details><details id="d-baking-11"><summary>Where advice changes for you</summary><div class="db"><div class="tw"><table><thead><tr><th>If…</th><th>Then…</th></tr></thead><tbody><tr><td>You have a big network (church, work, family)</td><td>Orders and custom work can start paying sooner; markets matter less</td></tr><tr><td>You have no local network</td><td>Markets and a Facebook Page become essential; expect a slow first season</td></tr><tr><td>You want to start very small</td><td>Orders to people you know, without insurance, is legal, but you carry the risk</td></tr></tbody></table></div></div></details>
+</ul></div></details><details id="d-baking-11"><summary>Where advice changes for you</summary><div class="db"><div class="tw"><table><thead><tr><th>If…</th><th>Then…</th></tr></thead><tbody><tr><td>You have a big network (church, work, family)</td><td>Orders and custom work can start paying sooner; markets matter less</td></tr><tr><td>You want to start very small</td><td>Orders to people you know, without insurance, is legal, but you carry the risk</td></tr></tbody></table></div></div></details>
   <a class="next ghost" href="#baking">Back to the one-page summary</a>
 </section>
 
 <section class="view guide opt-dogs" id="v-guide-dogs" data-view="guide-dogs" hidden>
   <a class="back" href="#guides">All guides</a>
   <p class="eyebrow"><span class="dot"></span>Full guide</p>
-  <h1>Videos of your dogs: a beginner's guide</h1>
+  <h1>Making videos: a beginner's guide</h1>
   <p>How posting videos of your dogs can bring in money, in the United States, as of late 2026. Platform rules change often, so check anything marked as a rule on the platform's own help page before relying on it.</p>
   <details id="d-dogs-0" open><summary>In one minute</summary><div class="db"><ul>
 <li><strong>It can start as a hobby and grow.</strong> Most new channels earn little in their first year; steady posting and videos people search for are what change that.</li>
@@ -533,17 +529,16 @@ body { margin: 0; }
 <li>Your phone, and one free editing app (see Step 2). The "Getting set up" guide covers camera settings, light, sound and the accounts.</li>
 <li>Optional: a $20 to $40 clip-on microphone for voiceovers.</li>
 <li>A log of free products and payments, for tax.</li>
-</ul></div></details><details id="d-dogs-2"><summary>What to expect</summary><div class="db"><p>These are modelled ranges, not promises. No one has measured what typical pet accounts earn, and most published figures come from people selling courses, tools or agency services.</p>
+</ul></div></details><details id="d-dogs-2"><summary>What to expect</summary><div class="db"><p>These are estimated ranges, not promises. No one has measured what typical pet accounts earn, and most published figures come from people selling courses, tools or agency services.</p>
 <div class="tw"><table><thead><tr><th>Situation</th><th>Rough cash a year</th></tr></thead><tbody><tr><td>A typical new account, year one</td><td>$0 to a few hundred dollars</td></tr><tr><td>10,000 followers, posting about four times a week and pitching brands, about 8 hours a week</td><td>$10 to about $6,300; about $1,600 in the middle case</td></tr><tr><td>One video that goes viral and is licensed</td><td>Usually low hundreds of dollars, once</td></tr></tbody></table></div>
-<p>The middle row is a channel that has grown well; it models an Instagram account pitching brands actively, and its figures are before tax. The table comes from the research's worked examples.</p>
-<p>Big success stories are real but rare: a Yorkie with about 2.5 million followers reportedly earned about $35,000 in 2021. Some "how I grew my account" stories are ads for courses, so your own numbers are the better guide.</p></div></details><details id="d-dogs-3"><summary>Before you start: five things</summary><div class="db"><ol>
+<p>The middle row is an account that has grown well and pitches brands actively; figures are before tax.</p>
+<p>Big success stories are real but rare: a Yorkie with about 2.5 million followers reportedly earned about $35,000 in 2021. Some "how I grew my account" stories are ads for courses, so your own numbers are the better guide.</p></div></details><details id="d-dogs-3"><summary>Before you start: four things</summary><div class="db"><ol>
 <li><strong>Never pay to get started.</strong> Real brands and platforms don't charge creators. Courses with income screenshots and pet-modeling agencies that charge registration or photo fees are the costliest traps. Buying followers or views is banned outright.</li>
 <li><strong>Brand offers can be scams.</strong> Fake "brand ambassador" messages flatter you and then ask for bank details or a shipping fee. Look up any brand's contact details yourself before replying.</li>
 <li><strong>Keep your home private.</strong> Turn off location on your phone's camera, keep your house front, street signs and car plates out of shot, and post a little later rather than live.</li>
 <li><strong>Free products count as income.</strong> Products a brand gives you for a post are generally taxable at their value. Keep a simple log from day one.</li>
-<li><strong>If you receive Social Security before your full retirement age, or any disability or means-tested benefit, ask before you start.</strong> Small amounts are unlikely to affect retirement benefits, but disability and SSI rules are stricter.</li>
-</ol></div></details><details id="d-dogs-4"><summary>Step by step</summary><div class="db"><p><strong>Step 1. Pick one platform (week 1).</strong> If you want videos that keep earning, choose YouTube (see "Videos that keep earning" below). Facebook reaches an older audience and suits local baking customers; Facebook Stars (small tips from viewers) open once you've had 500 followers for 30 days, and each Star is worth one cent. To receive Stars or brand deals you need an account set up for creators; this guide's research didn't cover those setup steps. YouTube's videos can be found by search for years, and it is the simplest place for product links later. TikTok reaches younger viewers fastest; its shopping features can wait.</p>
-<p><strong>Step 2. Learn one free editing app (weeks 1 to 3).</strong> Use YouTube Create or Instagram Edits (both free) or TikTok's built-in editor; Facebook's own editor wasn't reviewed. Learn one well. Export one clean file and post that same file anywhere you like; there is no penalty for posting your own video on several platforms, but don't re-upload a download that carries another app's logo stamped on it (a watermark).</p>
+</ol></div></details><details id="d-dogs-4"><summary>Step by step</summary><div class="db"><p><strong>Step 1. Pick one platform (week 1).</strong> If you want videos that keep earning, choose YouTube (see "Videos that keep earning" below). Facebook reaches an older audience and suits local baking customers; Facebook Stars (small tips from viewers) open once you've had 500 followers for 30 days, and each Star is worth one cent. YouTube's videos can be found by search for years, and it is the simplest place for product links later. TikTok reaches younger viewers fastest; its shopping features can wait.</p>
+<p><strong>Step 2. Learn one free editing app (weeks 1 to 3).</strong> Use YouTube Create or Instagram Edits (both free) or TikTok's built-in editor. Learn one well. Export one clean file and post that same file anywhere you like; there is no penalty for posting your own video on several platforms, but don't re-upload a download that carries another app's logo stamped on it (a watermark).</p>
 <p><strong>Step 3. Film the dogs as they already are (ongoing).</strong> Keep your phone handy for natural moments; the "Getting set up" guide has the camera settings and framing. Add captions, because many people watch with the sound off. Formats that suit a beginner include a recurring "cast" of your dogs, a voiceover in which you narrate or "speak" for a dog, a "day in the life" series, and stories about senior or rescue dogs.</p>
 <p><strong>Step 4. Post two to four videos a week, without stress (months 1 to 6).</strong> Daily posting isn't needed. On TikTok, posting more mostly buys more lottery tickets rather than more views per video. A realistic week of three to five hours looks like this:</p>
 <ul>
@@ -559,10 +554,10 @@ body { margin: 0; }
 <li><strong>Links to products you use</strong>, such as Amazon links for the harness or bed your dogs actually use, pay a small commission (3% on most pet products). Put these links on YouTube; most Facebook groups ban them. The companion guide on Amazon links covers this.</li>
 <li><strong>Licensing a viral clip</strong> pays a share, but the license is usually exclusive, and the agency may then remove copies elsewhere, sometimes even your own re-uploads. Read the terms before signing.</li>
 </ul>
-<p><strong>Step 7. Review at six and twelve months.</strong> Compare the money and the free products against your hours. Keep copies of your original videos on your phone and in the cloud; they stay yours unless you signed an exclusive license.</p></div></details><details id="d-dogs-5"><summary>Videos that keep earning</summary><div class="db"><p>The hope behind many video makers' work is that out of many videos, a few become hits that keep earning for months. That pattern fits longer YouTube videos best, because people find them by search long after posting; the research expects them to last for years. Short clips depend more on the app's feed. One format that combines your interests is baking how-to videos of 10 to 15 minutes, with your dogs as the cast, which would also advertise your pre-orders. Minnesota's cottage food rules keep pets out of the kitchen while you bake to sell (see the baking guide), so the dogs would appear outside the kitchen, or with practice batches you don't sell. The research didn't test this combination. Cut short clips from the same footage to post as well.</p>
-<p>One thing to know: YouTube pays ad money only after a channel joins its Partner Program. From February 2027, new channels need 1,000 subscribers plus 8,000 hours of viewing in a year. In one large dataset, about 3 in 10 small channels posting weekly for a year reached 1,000 subscribers; posting less often likely does worse. Once a channel is in, long videos pay roughly $1 to $6 per 1,000 views by outside estimates, so a hit with 100,000 views might bring about $100 to $600 over its life. For a new channel, short clips won't earn from ads after February 2027. Until a channel qualifies, money comes from brand deals, Amazon links and baking customers.</p>
-<p>Channels that grow usually post on a steady schedule, such as one longer video every week or two; the research expects returns to show after a year or more.</p></div></details><details id="d-dogs-6"><summary>Your dogs on camera</summary><div class="db"><p>A fair warning about the competition: in one study of popular "funny" dog and cat videos, 82% of those with a clear view showed stressed animals, and those got more engagement. So the fastest-spreading formats aren't ones you'd want to make, and a calm channel of real dogs may grow more slowly than the most viral ones.</p>
-<p>Two rules are about the business side:</p>
+<p><strong>Step 7. Review at six and twelve months.</strong> Compare the money and the free products against your hours. Keep copies of your original videos on your phone and in the cloud; they stay yours unless you signed an exclusive license.</p></div></details><details id="d-dogs-5"><summary>Videos that keep earning</summary><div class="db"><p>The hope behind many video makers' work is that out of many videos, a few become hits that keep earning for months. That pattern fits longer YouTube videos best, because people find them by search long after posting; they can last for years. Short clips depend more on the app's feed. One format that combines your interests is baking how-to videos of 10 to 15 minutes, with your dogs as the cast, which would also advertise your pre-orders. Minnesota's cottage food rules keep pets out of the kitchen while you bake to sell (see the baking guide), so the dogs would appear outside the kitchen, or with practice batches you don't sell. Cut short clips from the same footage to post as well.</p>
+<p>One thing to know: YouTube pays ad money only after a channel joins its Partner Program. From February 2027, new channels need 1,000 subscribers plus 8,000 hours of viewing in a year (up from 4,000). In one large dataset, about 3 in 10 small channels posting weekly for a year reached 1,000 subscribers; posting less often likely does worse. Once a channel is in, long videos pay roughly $1 to $6 per 1,000 views, most topics around $1.50 to $3, so a hit with 100,000 views might bring about $100 to $600 over its life. For a new channel, short clips won't earn from ads after February 2027. Until a channel qualifies, money comes from brand deals, Amazon links and baking customers.</p>
+<p>Channels that grow usually post on a steady schedule, such as one longer video every week or two; returns usually show after a year or more.</p></div></details><details id="d-dogs-6"><summary>Your dogs on camera</summary><div class="db"><p>A fair warning about the competition: in one study of popular "funny" dog and cat videos, 82% of those with a clear view showed stressed animals, and those got more engagement. So the fastest-spreading formats aren't ones most dog owners would want to make, and a calm channel of real dogs may grow more slowly than the most viral ones.</p>
+<p>Two business rules:</p>
 <ol>
 <li>Promote only products you would give your dogs anyway.</li>
 <li>Never repeat a brand's health claims, such as "cures anxiety" or "helps arthritis"; you can be held responsible for claims you repeat.</li>
@@ -586,28 +581,25 @@ body { margin: 0; }
 <section class="view guide opt-amazon" id="v-guide-amazon" data-view="guide-amazon" hidden>
   <a class="back" href="#guides">All guides</a>
   <p class="eyebrow"><span class="dot"></span>Full guide</p>
-  <h1>Amazon links and reviews: a beginner's guide</h1>
-  <p>This guide explains how people earn small commissions by recommending products on Amazon, and which Amazon programs are worth a beginner's time. It is written for you, in the United States, in late 2026, and works best alongside the guide to videos of your dogs, because Amazon links need an audience to earn anything. Amazon changes its rules often, so check its own pages before relying on any rule here.</p>
+  <h1>Amazon links: a beginner's guide</h1>
+  <p>How small commissions from Amazon links work, as of late 2026. Links need video viewers first. Amazon changes its rules often, so check its own pages before relying on any rule here.</p>
   <details id="d-amazon-0" open><summary>In one minute</summary><div class="db"><ul>
 <li><strong>Amazon Associates pays a small share of what people buy after clicking your link</strong>: 3% on pet products, so a typical $45 pet order earns about $1.35.</li>
-<li><strong>You need an audience first.</strong> Amazon closes your application if you don't make three sales from other people within 180 days of joining, so make videos first and join later.</li>
-<li><strong>The first year is usually small</strong>; links earn more as your videos collect viewers. After a year or more of steady videos, ten to a few hundred dollars a month is plausible.</li>
+<li><strong>You need an audience first.</strong> Amazon closes your account if you don't make three sales from other people within 180 days of joining, so make videos first and join later.</li>
+<li><strong>The first year is usually small</strong>; links earn more as your videos collect viewers. Typically $25 to $250 a year by the second year; a few hundred dollars a month needs a large audience.</li>
 <li><strong>The Influencer Program is the better fit for video.</strong> Amazon can show your product videos on its own product pages and pay you when shoppers buy.</li>
 <li><strong>Amazon Vine is not income.</strong> It gives free products, which are taxed at their value.</li>
 <li><strong>Never join "review for a refund" groups.</strong> They break Amazon's rules and can cost you your account.</li>
 <li><strong>Say clearly that you earn from your links</strong>, every time.</li>
 </ul></div></details><details id="d-amazon-1"><summary>What you need</summary><div class="db"><ul>
 <li>Your dog videos, on YouTube ideally, with a regular audience.</li>
-<li>A computer with a web browser, for making links; this guide's research didn't check whether the Amazon phone app can do it.</li>
+<li>A computer with a web browser, for making links.</li>
 <li>Your Social Security number or tax ID and bank details, for Amazon's tax form and payments.</li>
-</ul></div></details><details id="d-amazon-2"><summary>What to expect</summary><div class="db"><div class="tw"><table><thead><tr><th>Stage</th><th>Rough earnings</th></tr></thead><tbody><tr><td>First year</td><td>Near $0</td></tr><tr><td>After a year or two of steady videos</td><td>Ten to a few hundred dollars a month</td></tr><tr><td>50 approved product videos in the Influencer Program</td><td>About $50 to $250 a month, once Amazon places them</td></tr><tr><td>10,000 views of a longer YouTube video with product links</td><td>About $10 to $45</td></tr><tr><td>A website with 10,000 visitors a month</td><td>About $108 a month in a middle case, roughly $5 an hour at five hours a week</td></tr></tbody></table></div>
-<p>These are modelled ranges from the research. No one has published what typical beginners earn; the income surveys come from people selling affiliate courses.</p>
-<h3>How the arithmetic works</h3>
-<p>Your monthly earnings are: people who watch or visit × the share who click × the share of clickers who buy × the average order × the commission rate. A worked example with middle-case guesses for a website:</p>
-<div class="tw"><table><thead><tr><th>Step</th><th>Number</th></tr></thead><tbody><tr><td>People who visit the website in a month</td><td>10,000</td></tr><tr><td>Share who click a link (10%)</td><td>1,000</td></tr><tr><td>Share of clickers who buy (8%)</td><td>80 orders</td></tr><tr><td>Average order</td><td>$45</td></tr><tr><td>Commission (3% on pet products)</td><td>about $108</td></tr></tbody></table></div>
-<p>Only the 3% rate is Amazon's published figure; the other numbers are assumptions, and the low case gives about $23. Video viewers click far less often than website visitors: for 10,000 views of a longer YouTube video, where 1 to 3% click, the research's estimate is about $10 to $45, and short clips earn less again. Dog food and supplements may count as grocery or health products and pay only 1%, and pet prescriptions pay nothing.</p></div></details><details id="d-amazon-3"><summary>Before you start: five things</summary><div class="db"><ol>
+</ul></div></details><details id="d-amazon-2"><summary>What to expect</summary><div class="db"><div class="tw"><table><thead><tr><th>Stage</th><th>Rough earnings</th></tr></thead><tbody><tr><td>First year</td><td>Near $0</td></tr><tr><td>Typical by the second year</td><td>About $25 to $250 a year</td></tr><tr><td>A large audience</td><td>A few hundred dollars a month</td></tr><tr><td>50 approved product videos in the Influencer Program</td><td>About $50 to $250 a month, once Amazon places them</td></tr><tr><td>10,000 views of a longer YouTube video with product links</td><td>About $10 to $45</td></tr></tbody></table></div>
+<p>No one has published what typical beginners earn; the income surveys come from people selling affiliate courses.</p>
+<p>Earnings are views × the share who click × the share who buy × the order size × the rate. For 10,000 views of a longer video, where 1 to 3% click, that comes to about $10 to $45; short clips earn less. Dog food and supplements may count as grocery or health products and pay only 1%, and pet prescriptions pay nothing.</p></div></details><details id="d-amazon-3"><summary>Before you start: five things</summary><div class="db"><ol>
 <li><strong>Joining is free.</strong> Anyone selling you a ready-made Amazon store, a "done-for-you" affiliate website or a passive-income system is a red flag; the FTC (the Federal Trade Commission, which polices advertising) has sued several such sellers for millions of dollars.</li>
-<li><strong>Don't post reviews on Amazon in return for free products or refunds.</strong> Amazon bans it and sues the groups that organize it. In the research, these offers are the most likely scam a beginner will meet.</li>
+<li><strong>Don't post reviews on Amazon in return for free products or refunds.</strong> Amazon bans it and sues the groups that organize it. These offers are the most likely scam a beginner will meet.</li>
 <li><strong>Don't buy through your own links, and don't ask family to.</strong> Those purchases don't count and break the rules.</li>
 <li><strong>Commissions and free products are taxable income</strong>, even if no tax form arrives.</li>
 <li><strong>Protect your Amazon login.</strong> Fake "Amazon support" messages asking for your password or a sign-in code are common. Open notices only inside the Amazon app or website, and turn on two-factor sign-in.</li>
@@ -630,7 +622,8 @@ body { margin: 0; }
 <li>No links in paid or boosted ads.</li>
 <li>Links in email or text messages only to people who asked to receive them.</li>
 </ul>
-<p>Break a rule and Amazon can close your account and keep unpaid commission.</p></div></details><details id="d-amazon-6"><summary>Other programs worth knowing</summary><div class="db"><p>Some pet companies pay a flat fee for each new customer instead of a percentage. Reported examples include Chewy at about $15 per new customer and fresh-food or pet-insurance companies at $20 to $60. One such sign-up can pay 10 to 40 times a typical Amazon pet sale, though fewer people sign up. These rates change often, so check them inside each program. Amazon's rules limit using another program for the same click, so read them before combining links in one post.</p></div></details><details id="d-amazon-7"><summary>Amazon Vine</summary><div class="db"><p>Vine is invitation-only; you can't apply. Members get free products to review, not money. Each item is taxed at Amazon's estimate of its value, so a $300 gadget could cost roughly $36 to $80 in tax. Vine reviews can't contain your links. At best, Vine saves money on things you'd buy anyway.</p></div></details><details id="d-amazon-8"><summary>First year: an if-then plan</summary><div class="db"><div class="tw"><table><thead><tr><th>If…</th><th>Then…</th></tr></thead><tbody><tr><td>Your typical video wouldn't plausibly bring three sales in six months (a rough guess: a few hundred link clicks)</td><td>Keep making videos; wait to join Associates</td></tr><tr><td>Associates approved and two months have passed with no sale</td><td>Add links to your three most-watched videos; don't ask friends to buy</td></tr><tr><td>You near day 180 without three sales</td><td>Expect the account to close for good, and your old links stop earning. Whether you can open a new one wasn't checked, so don't join until you're confident of three sales</td></tr><tr><td>A pet company offers a flat fee per sign-up</td><td>Consider it for products your dogs actually use; disclose it</td></tr><tr><td>After 12 months, commissions are under $10 a month</td><td>Many people keep links as a bonus on videos they'd make anyway</td></tr></tbody></table></div></div></details><details id="d-amazon-9"><summary>Checklist</summary><div class="db"><ul>
+<p>Break a rule and Amazon can close your account and keep unpaid commission.</p></div></details><details id="d-amazon-6"><summary>Other programs worth knowing</summary><div class="db"><p>Some pet companies pay a flat fee for each new customer instead of a percentage. Reported examples include Chewy at about $15 per new customer and fresh-food or pet-insurance companies at $20 to $60. One such sign-up can pay 10 to 40 times a typical Amazon pet sale, though fewer people sign up. These rates change often, so check them inside each program. Amazon's rules limit using another program for the same click, so read them before combining links in one post.</p>
+<p>Amazon Vine is invitation-only. It gives free products to review, not money, and each item is taxed at its value.</p></div></details><details id="d-amazon-7"><summary>First year: an if-then plan</summary><div class="db"><div class="tw"><table><thead><tr><th>If…</th><th>Then…</th></tr></thead><tbody><tr><td>Your videos get fewer than a few hundred link clicks in six months</td><td>Joining can wait until they do</td></tr><tr><td>Associates approved and two months have passed with no sale</td><td>Add links to your three most-watched videos; don't ask friends to buy</td></tr><tr><td>You near day 180 without three sales</td><td>The account closes and old links stop earning</td></tr><tr><td>A pet company offers a flat fee per sign-up</td><td>Consider it for products your dogs actually use; disclose it</td></tr></tbody></table></div></div></details><details id="d-amazon-8"><summary>Checklist</summary><div class="db"><ul>
 <li class="check"><label><input type="checkbox" id="chk-17"><span>Videos made before joining</span></label></li>
 <li class="check"><label><input type="checkbox" id="chk-18"><span>Amazon disclosure sentence in your profile</span></label></li>
 <li class="check"><label><input type="checkbox" id="chk-19"><span>Spoken and written disclosure saved where you can copy it</span></label></li>
@@ -647,27 +640,26 @@ body { margin: 0; }
   <a class="back" href="#guides">All guides</a>
   <p class="eyebrow"><span class="dot"></span>Full guide</p>
   <h1>Selling used books: a beginner's guide</h1>
-  <p class="lede">For a beginner in Minnesota with a car, storage space, a few hours a day and a few hundred dollars. Figures are as of October 2026. Fees and rules change at least once a year, so check them again before relying on them.</p>
+  <p class="lede">Figures are as of October 2026. Fees and rules change at least once a year, so check them again before relying on them.</p>
   <details id="d-books-0" open><summary>In one minute</summary><div class="db"><p>You buy used books cheaply at thrift stores, library sales and yard sales, and sell the ones worth more online. The money is in a minority of books, such as textbooks, specialist nonfiction and older out-of-print titles.</p>
-<p>It's flexible work on your own schedule that starts small and grows with skill. After a few months of learning, a typical beginner earns about $5 to $7 an hour. With experience, good local sources and some luck, it can be $23 to $34 an hour.</p>
+<p>It's flexible work on your own schedule that starts small and grows with skill. After a few months of learning, a typical beginner earns about $7 an hour. With experience, good local sources and some luck, it can be $23 to $34 an hour.</p>
 <p>Selling books you already own costs nothing and teaches the whole process, so many people start there before buying books to resell.</p></div></details><details id="d-books-1"><summary>What you need</summary><div class="db"><ul>
 <li>A smartphone, for the scanning apps and photos.</li>
-<li>A printer for shipping labels. Some post offices print labels from a code on your phone; this guide's research didn't check that.</li>
+<li>A printer for shipping labels. Some post offices print labels from a code on your phone; ask yours.</li>
 <li>A kitchen or postal scale, padded mailers or small boxes, and packing tape.</li>
 <li>A cart or wagon, and a dry shelf indoors for stock.</li>
 <li>A notebook or simple spreadsheet for records.</li>
 </ul></div></details><details id="d-books-2"><summary>What to expect</summary><div class="db"><p>Nobody publishes what part-time book sellers earn. The figures below come from careful arithmetic using real 2026 fees, together with guesses about how many good books a beginner finds.</p>
 <div class="tw"><table><thead><tr><th>A month in your first year (months 4 to 12)</th><th>Selling on eBay, about 7 hours a week</th></tr></thead><tbody><tr><td>Bad month</td><td>a loss of about $33</td></tr><tr><td><strong>Typical month</strong></td><td><strong>about $220, or about $7 an hour</strong></td></tr><tr><td>Good month</td><td>about $760, or about $25 an hour</td></tr></tbody></table></div>
 <p>This table assumes you lean towards niche and older books, which fetch more on eBay. If you get ordinary Amazon-level prices instead, a typical month is nearer $3 to $4 an hour.</p>
-<p><strong>The first three months usually cost more than they bring in</strong>, because you buy books before they sell. About a third of the books you buy will never sell at a useful price. A good month needs experience, good local sources and luck together; each improvement, such as better prices or buying more books, adds about $1 to $6 an hour.</p></div></details><details id="d-books-3"><summary>Before you start: four things</summary><div class="db"><ol>
-<li><strong>Keep one simple tax routine.</strong> Keep one folder. Photograph every receipt. Write each sale in a notebook. Log your miles. In January, take it all to a tax preparer. All income is taxable, even when no tax form arrives. If you buy books to resell, you will usually report it as a small business (on the tax form called Schedule C), which lets you deduct the books, fees, postage and mileage; ask a tax preparer once, early. If it counted as a hobby, you could be taxed on everything you take in, with nothing deducted. Self-employment tax, roughly 14% of your profit, applies once profit reaches $400 for the year.</li>
-<li><strong>What to record.</strong> Each book's cost, purchase date, sale date and price, and the miles for each buying trip. The IRS rate is 76¢ a mile from July 2026.</li>
-<li><strong>Before you claim Social Security, check how earnings affect it.</strong> If you claim before your full retirement age (the age at which you get your full benefit), Social Security holds back $1 for every $2 you earn above $24,480 in 2026. A few hours a week of book selling is unlikely to reach that, but ask Social Security if you plan to claim early.</li>
+<p><strong>The first three months usually cost more than they bring in</strong>, because you buy books before they sell. About a third of the books you buy will never sell at a useful price. A good month needs experience, good local sources and luck together; each improvement, such as better prices or buying more books, adds about $1 to $6 an hour.</p></div></details><details id="d-books-3"><summary>Before you start: three things</summary><div class="db"><ol>
+<li><strong>It's a small business for tax.</strong> Buying to resell is usually reported on Schedule C, which lets you deduct the books, fees, postage and mileage. If it counted as a hobby, you could be taxed on everything you take in, with nothing deducted. The rest is in "Money, tax and benefits" under How they fit together.</li>
+<li><strong>What to record.</strong> Each book's cost, purchase date, sale date and price, and the miles for each buying trip.</li>
 <li><strong>Never pay for a course, a "done-for-you" store or a list of books to buy.</strong> These are the costliest traps for beginners. Free tools are enough.</li>
 </ol></div></details><details id="d-books-4"><summary>How it works, step by step</summary><div class="db"><p>Each step teaches you what the next one needs. You can stop at any step having lost very little.</p>
-<p><strong>Step 1. Sell your own books (cost: about $0).</strong> List a few of your own books on eBay. You'll learn how to photograph a book, judge its condition honestly, set a price, ship it by Media Mail (the Post Office's cheap, slow rate for books) and handle a buyer. eBay is the easiest place to start because it has no monthly fee. As a new seller, eBay holds your money until the book arrives plus 2 to 31 days, until you have 10 sales and $150. You can also sell books to buyback sites, which pay less but take the work off your hands.</p>
+<p><strong>Step 1. Sell your own books (cost: about $0).</strong> List a few of your own books on eBay. You'll learn how to photograph a book, judge its condition honestly, set a price, ship it by Media Mail (the Post Office's cheap, slow rate for books) and handle a buyer. eBay is the easiest place to start because it has no monthly fee. As a new seller, eBay holds each payment for a few days to a few weeks after delivery, until you've made 10 sales and $150. You can also sell books to buyback sites, which pay less but take the work off your hands.</p>
 <p><strong>Step 2. Learn to spot books worth buying.</strong> Install BookScouter on your phone. It needs no seller account. Scan a book's barcode and it shows what buyback sites would pay. You can also look up a book's recent sold prices on eBay. <strong>Safest first rule: buy only if BookScouter shows a buyback price above what you'd pay</strong>. Then you can never lose money on that book.</p>
-<p><strong>Step 3. Sell the better books online.</strong> List them on eBay. When you want to sell on Amazon too, open a free Amazon seller account on the Individual plan; it includes identity checks, the strictest part of selling on Amazon. In September 2026 an identity re-check reportedly froze about 20,000 accounts until sellers sent a video. The free Amazon Seller app then shows a book's price, how fast it sells and whether you're allowed to sell it. Keep your records from the first sale.</p>
+<p><strong>Step 3. Sell the better books online.</strong> List them on eBay. When you want to sell on Amazon too, open a free Amazon seller account on the Individual plan; it includes identity checks, which are strict and can pause an account. The free Amazon Seller app then shows a book's price, how fast it sells and whether you're allowed to sell it. Keep your records from the first sale.</p>
 <p><strong>Step 4. Grow only if it's working.</strong> Later, if you're selling a lot and have room and energy, consider having Amazon store and ship your books (called FBA), specializing in one kind of book, or paying for Amazon's $39.99-a-month plan. These suit sellers who are already selling a lot, since FBA costs money every month whether books sell or not.</p>
 <h3>A worked example: one book, start to finish</h3>
 <p>You find a nursing reference book at a thrift store for $2. The app shows that a used copy sells for about $16 including shipping.</p>
@@ -685,10 +677,10 @@ body { margin: 0; }
 <li><strong>Estate sales</strong> are good for specialist collections. Yard sales are cheap but slow.</li>
 <li><strong>Some library sales ban scanners</strong>, so check a sale's rules before you go.</li>
 </ul>
-<p>Nobody publishes how many good books you'll find per hour of looking. You can find out for your own area cheaply: scan 200 books at one thrift store, write down which ones would have made $5, and buy nothing.</p></div></details><details id="d-books-7"><summary>Your first month: a plan with stopping points</summary><div class="db"><p>A sample first month, if you try it:</p>
+<p>Nobody publishes how many good books you'll find per hour of looking; Week 3 of the first month below tests it for your area.</p></div></details><details id="d-books-7"><summary>Your first month: a plan with stopping points</summary><div class="db"><p>A sample first month, if you try it:</p>
 <ul>
 <li><strong>Week 1:</strong> list five of your own books on eBay.</li>
-<li><strong>Week 2:</strong> ship the ones that sell within two days, using eBay's labels.</li>
+<li><strong>Week 2:</strong> ship each sale within two days, using eBay's labels.</li>
 <li><strong>Week 3:</strong> scan 200 books at one thrift store, note which would have left $5, and buy nothing.</li>
 <li><strong>Week 4:</strong> spend up to $40 on books that pass the buying rules, and list them.</li>
 <li><strong>Day 30:</strong> compare hours, spending and sales.</li>
@@ -701,10 +693,9 @@ body { margin: 0; }
 <li class="check"><label><input type="checkbox" id="chk-29"><span>Buying rule written on a card: at least $5 left after fees, or a buyback price above cost</span></label></li>
 <li class="check"><label><input type="checkbox" id="chk-30"><span>Small boxes, packing supplies and a cart</span></label></li>
 <li class="check"><label><input type="checkbox" id="chk-31"><span>No paid courses, no paid lists, no one asking for your password or codes</span></label></li>
-<li class="check"><label><input type="checkbox" id="chk-32"><span>Before claiming Social Security early: check the earnings rule</span></label></li>
 </ul></div></details><details id="d-books-9"><summary>Where this advice changes for you</summary><div class="db"><ul>
 <li><strong>You have a car, storage space and a few hours a day.</strong> These make larger volumes possible later, including FBA with $500 to $1,000 of working capital, but only after the earlier steps work.</li>
-<li><strong>You know baking and cooking well.</strong> A subject you know is the strongest way into specialist books. Specialist cookbooks are one niche to look at, though the research didn't test them, so sold prices are worth checking before buying.</li>
+<li><strong>You know baking and cooking well.</strong> A subject you know is the strongest way into specialist books. Specialist cookbooks are one niche to look at; check sold prices before buying.</li>
 </ul></div></details>
   <a class="next ghost" href="#books">Back to the one-page summary</a>
 </section>
@@ -719,7 +710,7 @@ body { margin: 0; }
 <li><strong>Turn off location for the Camera</strong>, so your videos don't carry where you live.</li>
 <li><strong>YouTube needs a Google account, then a channel.</strong> The channel can have its own name, such as your dogs' names, and you can add a family member to help manage it.</li>
 <li><strong>Turn on two-step sign-in for both.</strong> It's the best protection against someone taking over an account.</li>
-</ul></div></details><details id="d-setup-1"><summary>Camera settings that make a better video</summary><div class="db"><p>These are in the Settings app, under Camera, then Record Video unless noted. Names are as on iOS 26; a few appear only on newer iPhones.</p>
+</ul></div></details><details id="d-setup-1"><summary>Camera settings that make a better video</summary><div class="db"><p>These are in the Settings app, under Camera, then Record Video unless noted. Names are as on iOS 26; a few appear only on newer iPhones. If you change only three: Location to Never, Grid on, Auto FPS off.</p>
 <div class="tw"><table><thead><tr><th>Setting</th><th>What to choose</th><th>Why</th></tr></thead><tbody><tr><td>Record Video</td><td>4K at 30 fps, or 1080p at 30 fps to save space</td><td>4K holds detail when you crop or zoom in editing; 1080p is plenty for phones</td></tr><tr><td>60 fps (tap the number in the Camera app)</td><td>For dogs running, playing or catching</td><td>Fast movement looks smooth instead of jerky</td></tr><tr><td>Slo-mo</td><td>120 or 240 fps</td><td>Ears flapping and a catch in mid-air are the shots people replay</td></tr><tr><td>Auto FPS</td><td>Off</td><td>In dim light it drops the frame rate, which makes movement choppy</td></tr><tr><td>Enhanced Stabilization</td><td>On</td><td>Smooths walking shots; it crops the picture slightly</td></tr><tr><td>Lock White Balance</td><td>On</td><td>Stops colours shifting mid-clip as the dog moves between light and shade</td></tr><tr><td>HDR Video</td><td>Off for TikTok and Shorts</td><td>HDR clips can look washed out or too bright on some apps; standard video looks the same everywhere</td></tr><tr><td>Settings &gt; Camera &gt; Grid</td><td>On</td><td>Lines for keeping the floor level and the dog's eyes in the top third</td></tr><tr><td>Settings &gt; Camera &gt; Preserve Settings</td><td>Turn on Camera Mode and Exposure Adjustment</td><td>The camera opens the way you left it, instead of resetting each time</td></tr><tr><td>Settings &gt; Camera &gt; Formats</td><td>High Efficiency</td><td>Files about half the size, with the same quality</td></tr><tr><td>Settings &gt; Privacy &amp; Security &gt; Location Services &gt; Camera</td><td>Never</td><td>Your videos don't carry where you live</td></tr></tbody></table></div>
 <p><strong>In the Camera app while filming:</strong></p>
 <ul>
@@ -751,31 +742,31 @@ body { margin: 0; }
 <p><strong>Framing</strong></p>
 <ul>
 <li>Get down to the dog's eye level; shots from standing height look like snapshots.</li>
-<li>Hold the phone upright for TikTok and Shorts, and sideways for longer YouTube videos. For both, film sideways in 4K and crop an upright version in editing.</li>
+<li>Film sideways in 4K; an upright version for TikTok and Shorts can be cropped in editing.</li>
 <li>Leave a little space in the direction the dog is looking or moving.</li>
 </ul></div></details><details id="d-setup-3"><summary>Before you share a clip</summary><div class="db"><p>If location was on when you filmed, you can leave it out when you share. In Photos, select the clip, tap Share, tap Options at the top, and turn off Location. "Location Not Included" shows it worked.</p>
 <p>It's also worth a quick look at the background for a house number, street sign or car plate.</p>
-<p>If a family member is doing the editing, AirDrop or a shared album in Photos sends them the clips at full quality.</p></div></details><details id="d-setup-4"><summary>A Google account and YouTube channel</summary><div class="db"><ol>
+<p>If a family member is doing the editing, AirDrop or a shared album in Photos sends them the clips at full quality.</p></div></details><details id="d-setup-4"><summary>A Google account and YouTube channel</summary><div class="db"><p>A channel can have its own name, such as your dogs' names, and a family member can be added as a manager to upload without your password. YouTube calls this a Brand Account.</p>
+<ol>
 <li><strong>A Google account.</strong> A Gmail address works. Some people make a separate one just for the channel, to keep it apart from personal email.</li>
 <li><strong>Create the channel.</strong> YouTube's own steps are written for a web browser, on a computer or in Safari at youtube.com. Tap your profile picture, then Settings, then "Add or manage channel(s)", then "Create a channel".</li>
-<li><strong>Choose a channel name.</strong> Your own name works. For a different name, such as your dogs' names, choose "Create a new channel" from that same list instead; YouTube calls this a Brand Account. A Brand Account also lets you add a family member as a manager later, so they can upload without your password.</li>
+<li><strong>Choose a channel name.</strong> Your own name works. For a different name, such as your dogs' names, choose "Create a new channel" from that same list instead; (the Brand Account above).</li>
 <li><strong>Pick a picture and a handle.</strong> The handle is the @name people use to find you. You can change it later, up to twice in 14 days.</li>
 <li><strong>Add a short description</strong> of what the channel is about: in the app, profile picture, then View channel, then the edit button.</li>
 </ol></div></details><details id="d-setup-5"><summary>A TikTok account</summary><div class="db"><ol>
 <li>Sign up in the app with a phone number, an email address, or your Apple or Google account, and choose a username.</li>
 <li><strong>Public or private.</strong> A public account can be seen by anyone, which is how videos get found. A private account shows your videos only to followers you approve, which is a comfortable way to practise first. The switch is under Settings and privacy, then Privacy.</li>
-</ol>
-<p>TikTok's help pages couldn't be checked for this guide, so these menu names may differ slightly.</p></div></details><details id="d-setup-6"><summary>Keeping your accounts safe</summary><div class="db"><ul>
+</ol></div></details><details id="d-setup-6"><summary>Keeping your accounts safe</summary><div class="db"><ul>
 <li><strong>Two-step sign-in.</strong> After your password, the account asks for a code from your phone, so a stolen password alone isn't enough. Google calls it 2-Step Verification, under Security at myaccount.google.com. TikTok has the same option in its security settings.</li>
 <li><strong>No real company asks for your password or a sign-in code</strong> by message, email or phone.</li>
 </ul></div></details><details id="d-setup-7"><summary>Checklist</summary><div class="db"><ul>
-<li class="check"><label><input type="checkbox" id="chk-33"><span>Record Video, Auto FPS, Lock White Balance and HDR set</span></label></li>
-<li class="check"><label><input type="checkbox" id="chk-34"><span>Grid and Preserve Settings turned on</span></label></li>
-<li class="check"><label><input type="checkbox" id="chk-35"><span>Location set to Never for the Camera</span></label></li>
-<li class="check"><label><input type="checkbox" id="chk-36"><span>Google account with 2-Step Verification</span></label></li>
-<li class="check"><label><input type="checkbox" id="chk-37"><span>YouTube channel: name, picture, handle</span></label></li>
-<li class="check"><label><input type="checkbox" id="chk-38"><span>TikTok account, if you want one: username, privacy choice, two-step sign-in</span></label></li>
-</ul></div></details><details id="d-setup-8"><summary>Where these steps come from</summary><div class="db"><p>Apple's iPhone User Guide and Personal Safety Guide (support.apple.com), YouTube Help (support.google.com/youtube), and current iPhone camera guides for iOS 26. Checked October 2026. Prices are typical US retail.</p></div></details>
+<li class="check"><label><input type="checkbox" id="chk-32"><span>Record Video, Auto FPS, Lock White Balance and HDR set</span></label></li>
+<li class="check"><label><input type="checkbox" id="chk-33"><span>Grid and Preserve Settings turned on</span></label></li>
+<li class="check"><label><input type="checkbox" id="chk-34"><span>Location set to Never for the Camera</span></label></li>
+<li class="check"><label><input type="checkbox" id="chk-35"><span>Google account with 2-Step Verification</span></label></li>
+<li class="check"><label><input type="checkbox" id="chk-36"><span>YouTube channel: name, picture, handle</span></label></li>
+<li class="check"><label><input type="checkbox" id="chk-37"><span>TikTok account, if you want one: username, privacy choice, two-step sign-in</span></label></li>
+</ul></div></details>
   <a class="next ghost" href="#dogs">Back to the videos summary</a>
 </section>
 </main>
@@ -832,11 +823,11 @@ body { margin: 0; }
 </script>
 <script>(function () {
 const TIERS = [
-  { id: "50", label: "Top 50%", note: "The middle of skilled, persistent people. Half do better, half do worse." },
-  { id: "25", label: "Top 25%", note: "Better than three in four skilled, persistent people." },
-  { id: "10", label: "Top 10%", note: "Better than nine in ten. This is about as high as the evidence reasonably supports." },
-  { id: "5",  label: "Top 5%",  note: "Thin evidence. These figures are the edge of what the models allow, not observed data." },
-  { id: "1",  label: "Top 1%",  note: "Very thin evidence. These are rare outliers: nice if it happens, but not something to count on." }
+  { id: "50", name: "Typical",     label: "Top 50%", note: "Typical: the middle result for someone who sticks with it. Half do better, half do worse." },
+  { id: "25", name: "Good",        label: "Top 25%", note: "Good: better than three in four people who stick with it." },
+  { id: "10", name: "Very good",   label: "Top 10%", note: "Very good: better than nine in ten. This is about as high as the evidence reasonably supports." },
+  { id: "5",  name: "Exceptional", label: "Top 5%",  note: "Exceptional: thin evidence. These figures show the most the arithmetic allows, not observed results." },
+  { id: "1",  name: "Rare",        label: "Top 1%",  note: "Rare: very thin evidence. Nice if it happens, but not something to count on." }
 ];
 const YEARS = [{ id: "y1", label: "Year 1" }, { id: "y2", label: "Year 2" }];
 const EV = {
@@ -851,39 +842,39 @@ const OPTIONS = [
     driver: "Mostly skill and hours. Your customers and craft decide this, not an algorithm.",
     y1: [[6000,10000],[10000,16000],[16000,25000],[25000,35000],[35000,50000]],
     y2: [[10000,15000],[15000,25000],[25000,40000],[40000,55000],[55000,78000]],
-    sub: ["$10–14 net per hour","$14–18 net per hour","$18–25 net per hour","$20–28 net per hour, with a helper","Near the $78k cottage cap"],
+    sub: ["$10–14 net per hour","$14–18 net per hour","$18–25 net per hour","$20–28 net per hour, with a helper","Near the home-baking sales limit"],
     takes: [
       "Decorated-cookie orders, 20–30 dozen a month at $50–55, plus one summer market. Mostly repeat customers.",
       "Prices above $55 a dozen, a waitlist at graduation and the holidays, and repeat customers making up most orders.",
       "$60+ a dozen, shipping within Minnesota from Aug 2027, and every seasonal peak booked.",
       "A part-time helper or 100+ hours a month, a known local name, and wedding or corporate orders.",
-      "Paid help and sales near the $78k legal cap. The next step from here would be a licensed kitchen, which comes with its own costs and setup."
+      "Paid help and sales near the legal limit for home bakers, about $78k a year under the rules starting August 2027. The next step from here would be a licensed kitchen, which comes with its own costs and setup."
     ],
     ev: ["weak","weak","weak","thin","thin"],
     evText: [
-      "Built from the report's cost models. No Minnesota revenue data exists.",
-      "Built from the report's cost models. No Minnesota revenue data exists.",
-      "Consistent with the 5% of Minnesota registrants expecting over $7,665 a year.",
+      "Worked out from ingredient and time costs; nobody publishes Minnesota home-baker sales.",
+      "Worked out from ingredient and time costs; nobody publishes Minnesota home-baker sales.",
+      "In 2024 about 5% of Minnesota home bakers expected more than $7,665 a year in sales, so this level is above most.",
       "Above what one person's hours allow, so it assumes help.",
-      "Anchored only on the legal cap and one 2016 survey's top Minnesota seller ($60k)."
+      "Based only on the legal sales limit and one 2016 survey's top Minnesota seller ($60k)."
     ] },
   { id: "video", name: "Videos", measure: "Direct income per year", hours: 30, hoursText: "about 30 hours a month of filming, with family help on editing",
     driver: "Skill and consistency decide whether the channel takes off. Luck decides which video breaks out.",
     y1: [[0,200],[100,600],[300,1500],[1000,3000],[3000,10000]],
     y2: [[0,500],[300,1500],[1000,4000],[3000,10000],[10000,40000]],
-    sub: ["Often still under 1k subscribers and short of the ad bar","Around 1k–5k subscribers","5k–25k subscribers","25k–100k subscribers","100k+ subscribers"],
+    sub: ["Often under 1,000 subscribers, so YouTube isn't paying ads yet","Around 1,000–5,000 subscribers","5,000–25,000 subscribers","25,000–100,000 subscribers","100,000+ subscribers"],
     takes: [
-      "Steady uploads, improving retention and a few small or gifted deals. If you also sell something, such as baked goods, the videos can bring in orders too, worth roughly $1,200–3,000 a year.",
-      "In the Partner Program, with a handful of how-to videos that keep pulling search views.",
+      "Steady uploads, people watching longer, and a few small paid deals or free products. If you also sell something, such as baked goods, the videos can bring in orders too, worth roughly $1,200–3,000 a year.",
+      "Earning from YouTube ads, with a handful of how-to videos that people keep finding through search.",
       "Several videos past 100k views and recurring brand deals.",
       "A breakout series, with brands and agencies reaching out to you.",
       "A viral run plus the skill to keep it going. For scale, a dog with 2.5M followers reportedly earned about $35k in 2021."
     ],
     ev: ["weak","weak","weak","thin","spec"],
     evText: [
-      "YouTube's ad bar is 8,000 watch hours, about 120k–160k views a year. A typical weekly channel gets 15k–40k views, so Year 1 is mostly about building up a library of videos.",
-      "Pay rates come from vendor data ($2.25 per 1,000 food-video views, about 39% higher in Q4).",
-      "Views are very concentrated: the top 1% of long-form videos took 54% of all first-week views (vidIQ, 38M videos).",
+      "YouTube starts paying ads after 8,000 hours of viewing in a year, about 120,000–160,000 views. A typical weekly channel gets 15,000–40,000 views, so Year 1 is mostly about building up a library of videos.",
+      "Pay rates come from companies that work with creators: about $2.25 per 1,000 views of food videos, and about 39% more in October to December.",
+      "Views are very uneven: the top 1% of full-length videos got 54% of all first-week views, across 38 million videos.",
       "The evidence at this level comes from individual success stories.",
       "Luck plays a big part at this level. Celebrity-dog incomes are self-reported."
     ] },
@@ -893,7 +884,7 @@ const OPTIONS = [
     y2: [[25,250],[200,1000],[800,3000],[2500,8000],[8000,20000]],
     sub: ["Kitchen products pay 4.5%, pet products 3%","Kitchen products pay 4.5%, pet products 3%","Plus Amazon's own product-video pay","Top placements on Amazon product pages","Large audience, best-selling kitchen products"],
     takes: [
-      "Links in video descriptions, earning about $10–45 per 10,000 long-form views.",
+      "Links in video descriptions, earning about $10–45 per 10,000 views of full-length videos.",
       "A video audience at the top-25% level, linking products that match your videos, such as pet supplies or baking tools.",
       "Approved product videos on Amazon (an estimated $50–250 a month) plus link income from a large audience.",
       "Product videos winning the top spots on Amazon's own product pages.",
@@ -903,7 +894,7 @@ const OPTIONS = [
     evText: [
       "No reliable median is published. Many income claims online come from course sellers, so they're worth reading with care.",
       "No reliable median is published. Many income claims online come from course sellers, so they're worth reading with care.",
-      "Modelled from the video audience and Amazon's published rates.",
+      "Worked out from video views and Amazon's published rates.",
       "Top placement decisions are made by Amazon and can't be predicted.",
       "Few comparable cases, and it depends on Amazon's rules."
     ] },
@@ -923,7 +914,7 @@ const OPTIONS = [
     evText: [
       "Fees are well documented. No book-specific earnings data exists.",
       "Fees are well documented. No book-specific earnings data exists.",
-      "Matches the report's optimistic cases ($17–34 an hour).",
+      "Matches the best cases in the research ($17–34 an hour).",
       "Based on sellers' own reports.",
       "Based on sellers' own reports. Rare-book dealing is a specialist trade."
     ] }
@@ -940,7 +931,8 @@ function seg(el, items, isOn, onClick) {
   el.innerHTML = "";
   items.forEach((it, i) => {
     const b = document.createElement("button");
-    b.type = "button"; b.id = el.id + "-" + it.id; b.textContent = it.label;
+    b.type = "button"; b.id = el.id + "-" + it.id;
+    if (it.name) { b.innerHTML = `${it.name}<small>${it.label}</small>`; } else { b.textContent = it.label; }
     b.setAttribute("aria-pressed", String(isOn(it, i)));
     b.addEventListener("click", () => onClick(it, i));
     el.appendChild(b);
@@ -993,7 +985,7 @@ function renderLadder() {
       const on = ti === state.tier;
       const col = on ? "var(--accent)" : "var(--tier-dim)";
       const thin = o.ev[ti] === "thin" || o.ev[ti] === "spec";
-      s += `<text x="${left - 10}" y="${y + 4}" text-anchor="end" style="font-size:11px">${t.label}</text>`;
+      s += `<text x="${left - 10}" y="${y + 4}" text-anchor="end" style="font-size:11px">${t.name}</text>`;
       s += `<line class="bar" x1="${x(a)}" x2="${x(b)}" y1="${y}" y2="${y}" stroke="${col}" stroke-width="${on ? 8 : 6}" stroke-linecap="round" ${thin ? 'stroke-dasharray="2 4"' : ""}/>`;
       if (on) s += `<text x="${Math.min(x(b) + 10, W - right)}" y="${y + 4}" style="fill:var(--fg);font-family:var(--font-data);font-size:11px" ${x(b) + 10 > W - 90 ? `text-anchor="end" dx="-14" dy="-10"` : ""}>${fmtR([a, b])}</text>`;
     });
@@ -1007,7 +999,7 @@ function renderCombine() {
   box.innerHTML = OPTIONS.map(o => `<label for="c-${o.id}">${o.name}
     <select id="c-${o.id}" data-id="${o.id}">
       <option value="-1">Not doing it</option>
-      ${TIERS.map((t, i) => `<option value="${i}" ${combo[o.id] === i ? "selected" : ""}>${t.label}</option>`).join("")}
+      ${TIERS.map((t, i) => `<option value="${i}" ${combo[o.id] === i ? "selected" : ""}>${t.name} (${t.label.toLowerCase()})</option>`).join("")}
     </select></label>`).join("");
   box.querySelectorAll("select").forEach(sel => {
     if (combo[sel.dataset.id] === -1) sel.value = "-1";
@@ -1022,10 +1014,12 @@ function updateTotal() {
     if (o.ev[i] !== "weak" && o.ev[i] !== "mod") thin = true; });
   document.getElementById("total").textContent = picked.length ? fmtR([lo, hi]) : "$0";
   const w = [];
-  if (picked.length) w.push(`<strong>About ${hrs} hours a month</strong> across ${picked.map(o => o.name.toLowerCase()).join(", ")}.`);
-  if (hrs > 110) w.push("That's more than \"a few hours a day\", so this mix would mean more time than planned, or a lower tier in some options.");
-  if (thin) w.push("At least one choice uses a tier with very thin evidence.");
-  w.push("Totals mix sales (baking) with net income (the others), so the real take-home pay is lower than this.");
+  const perDay = Math.round(hrs / 30 * 2) / 2;
+  const perDayTxt = String(perDay).replace(".5", "½");
+  if (picked.length) w.push(`<strong>About ${hrs} hours a month</strong> across ${picked.map(o => o.name).join(", ")}. That's about ${perDayTxt} hours a day, every day.`);
+  if (perDay > 3) w.push("Fewer options, or a lower level in some, brings it down.");
+  if (thin) w.push("At least one choice uses a level with very thin evidence.");
+  w.push("Baking counts sales before costs, and the others count income, so take-home pay is lower than this total.");
   document.getElementById("hoursWarn").innerHTML = w.join(" ");
 }
 
