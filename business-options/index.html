@@ -8,7 +8,7 @@
 <style>
 /* Layout: one phone column, a bottom tab bar, each option keyed to its own colour. */
 :root {
-  --bg: #fbfaf7; --surface: #ffffff; --ink: #1f2430; --muted: #5b6070; --line: #dcdad3;
+  --bg: #fbfaf7; --surface: #ffffff; --ink: #1f2430; --muted: #474c59; --line: #dcdad3;
   --accent: #2f5d8a; --accent-ink: #ffffff;
   --baking: #b0436a; --dogs: #4b7a35; --amazon: #2f6aa0; --books: #9a6a12;
   --tint: rgba(47,93,138,.08);
@@ -16,17 +16,18 @@
   --body: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
-  --bg: #15171c; --surface: #1d2027; --ink: #eceae4; --muted: #a7abb6; --line: #343844;
+  --bg: #15171c; --surface: #1d2027; --ink: #eceae4; --muted: #c3c6ce; --line: #343844;
   --accent: #8db7e0; --accent-ink: #10141a;
   --baking: #e58aab; --dogs: #9cc985; --amazon: #8ab8e6; --books: #e0b35e; --tint: rgba(141,183,224,.12);
   color-scheme: dark } }
 :root[data-theme="dark"] {
-  --bg: #15171c; --surface: #1d2027; --ink: #eceae4; --muted: #a7abb6; --line: #343844;
+  --bg: #15171c; --surface: #1d2027; --ink: #eceae4; --muted: #c3c6ce; --line: #343844;
   --accent: #8db7e0; --accent-ink: #10141a;
   --baking: #e58aab; --dogs: #9cc985; --amazon: #8ab8e6; --books: #e0b35e; --tint: rgba(141,183,224,.12);
   color-scheme: dark }
-html { -webkit-text-size-adjust: 100%; }
-body { background: var(--bg); color: var(--ink); font: 18px/1.55 var(--body); }
+html { -webkit-text-size-adjust: 100%; font-size: 20px; }
+html[data-size="1"] { font-size: 23px; } html[data-size="2"] { font-size: 26px; } html[data-size="3"] { font-size: 30px; }
+body { background: var(--bg); color: var(--ink); font: 1rem/1.6 var(--body); }
 main { max-width: 40rem; margin: 0 auto; padding-block: 20px 120px;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 .opt-baking { --c: var(--baking); } .opt-dogs { --c: var(--dogs); } .opt-amazon { --c: var(--amazon); } .opt-books { --c: var(--books); }
@@ -36,7 +37,7 @@ h3 { font-size: 1.05rem; margin: 1.4rem 0 .4rem; }
 p { margin: 0 0 .9rem; }
 ul, ol { padding-left: 1.3rem; margin: 0 0 1rem; } li { margin-bottom: .4rem; }
 a { color: var(--accent); }
-.eyebrow { font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; display: flex; align-items: center; gap: .5rem; }
+.eyebrow { font-size: .85rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0; display: flex; align-items: center; gap: .5rem; }
 .lede { color: var(--muted); font-style: italic; }
 .note, .hint { color: var(--muted); font-size: .95rem; }
 .dot { width: .8rem; height: .8rem; border-radius: 50%; background: var(--c, var(--accent)); flex: none; display: inline-block; }
@@ -52,19 +53,20 @@ a { color: var(--accent); }
   background: var(--surface); border: 1px solid var(--line); border-left: 6px solid var(--c); border-radius: 10px; padding: .9rem 1rem; min-height: 64px; }
 .card .ct { font: 400 1.2rem/1.2 var(--display); }
 .card .cs { grid-column: 2; color: var(--muted); font-size: .95rem; }
-.card .fit { grid-column: 3; grid-row: 1 / span 2; font-size: .85rem; font-weight: 700; color: var(--c); text-align: right; }
+.card .fit { grid-column: 3; grid-row: 1 / span 2; font-size: .9rem; font-weight: 700; color: var(--c); text-align: right; }
 .tlink { --c: var(--accent); margin-top: .7rem; }
 .card::after { content: "›"; grid-column: 3; grid-row: 1 / span 2; justify-self: end; font-size: 1.6rem; color: var(--muted); }
 .card:has(.fit:not(:empty))::after { content: none; }
 .crow { border-top: 1px solid var(--line); padding-top: .2rem; }
 .cl { list-style: none; padding: 0; display: grid; gap: .35rem; }
-.cl li { display: grid; grid-template-columns: auto 6.2rem 1fr; gap: .5rem; align-items: baseline; margin: 0; }
-.cl li b { font-size: .95rem; }
+.cl li { display: grid; grid-template-columns: auto 1fr; column-gap: .5rem; align-items: baseline; margin: 0 0 .5rem; }
+.cl li > span:last-child { grid-column: 2; }
+.cl li b { font-size: 1rem; }
 .cl .dot { width: .65rem; height: .65rem; }
 .tw { overflow-x: auto; margin: .4rem 0 1.2rem; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
-table { border-collapse: collapse; font-size: .92rem; line-height: 1.4; min-width: 100%; font-variant-numeric: tabular-nums; }
+table { border-collapse: collapse; font-size: .95rem; line-height: 1.4; min-width: 100%; font-variant-numeric: tabular-nums; }
 th, td { text-align: left; vertical-align: top; padding: .5rem .6rem; border-bottom: 1px solid var(--line); }
-th { background: var(--tint); font-size: .85rem; }
+th { background: var(--tint); font-size: .9rem; }
 td { min-width: 7.5rem; }
 .brief h1, .guide h1 { border-bottom: 4px solid var(--c); padding-bottom: .4rem; }
 .brief .eyebrow, .guide .eyebrow { --c: inherit; }
@@ -84,11 +86,18 @@ li.check input:checked + span { color: var(--muted); text-decoration: line-throu
 .next.ghost { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); margin-top: .7rem; }
 .pair { display: grid; }
 nav { position: fixed; left: 0; right: 0; bottom: 0; z-index: 5; background: var(--surface); border-top: 1px solid var(--line);
-  display: grid; grid-template-columns: repeat(3, 1fr);
+  display: grid; grid-template-columns: repeat(4, 1fr);
   padding-bottom: env(safe-area-inset-bottom, 0px);
   padding-left: max(8px, env(safe-area-inset-left, 0px)); padding-right: max(8px, env(safe-area-inset-right, 0px)); }
-nav a { text-align: center; text-decoration: none; color: var(--muted); font-size: .9rem; font-weight: 700; padding: .8rem .2rem; min-height: 52px; }
-nav a .i { display: block; font-size: 1.25rem; line-height: 1; margin-bottom: .2rem; }
+nav a { text-align: center; text-decoration: none; color: var(--muted); font-size: min(.95rem, 4.4vw); font-weight: 700; padding: .7rem .1rem; min-height: 60px; }
+nav a .i { display: block; font-size: min(1.3rem, 6vw); line-height: 1; margin-bottom: .2rem; }
+.sizes { display: grid; gap: .6rem; margin: 1rem 0 1.5rem; }
+.size { font: inherit; color: var(--ink); background: var(--surface); border: 2px solid var(--line); border-radius: 12px;
+  padding: .8rem 1rem; min-height: 60px; text-align: left; cursor: pointer; display: flex; justify-content: space-between; align-items: center; }
+.size .s { font-weight: 600; }
+.size[aria-pressed="true"] { border-color: var(--accent); box-shadow: inset 0 0 0 1px var(--accent); }
+.size[aria-pressed="true"]::after { content: "✓"; color: var(--accent); font-weight: 700; font-size: 1.3rem; }
+.sizehint { display: block; margin-top: .6rem; }
 nav a[aria-current="page"] { color: var(--accent); box-shadow: inset 0 3px 0 var(--accent); }
 a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
 @media (prefers-reduced-motion: no-preference) { .view:not([hidden]) { animation: in .18s ease-out; } @keyframes in { from { opacity: .4; } to { opacity: 1; } } }
@@ -96,7 +105,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   
   --surface: #ffffff;
   --fg: #1d2330;
-  --muted: #5d6576;
+  --muted: #474c59;
   --line: #dde1e8;
   --accent: #b0346a;      
   --accent-soft: #f7e3ec;
@@ -108,12 +117,12 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   --font-data: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) #v-earn {
-   --surface: #1c2029; --fg: #e8ebf1; --muted: #9aa3b4; --line: #2e3442;
+   --surface: #1c2029; --fg: #e8ebf1; --muted: #c3c6ce; --line: #2e3442;
   --accent: #ec6fa4; --accent-soft: #3a2230; --accent-fg: #1a0d13; --tier-dim: #465063;
   --ev-mod: #5cc093; --ev-weak: #e0a548; --ev-thin: #ee7c68; --ev-spec: #be8ae0;
   color-scheme: dark; } }
 :root[data-theme="dark"] #v-earn {
-   --surface: #1c2029; --fg: #e8ebf1; --muted: #9aa3b4; --line: #2e3442;
+   --surface: #1c2029; --fg: #e8ebf1; --muted: #c3c6ce; --line: #2e3442;
   --accent: #ec6fa4; --accent-soft: #3a2230; --accent-fg: #1a0d13; --tier-dim: #465063;
   --ev-mod: #5cc093; --ev-weak: #e0a548; --ev-thin: #ee7c68; --ev-spec: #be8ae0;
   color-scheme: dark; }
@@ -170,7 +179,11 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 #v-earn details ul { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 6px; max-width: 75ch; }
 #v-earn a { color: var(--accent); }
 @media (prefers-reduced-motion: no-preference) { #v-earn .range, #v-earn .bar { transition: opacity .15s; } }
-#v-earn { font-size: 17px; }
+#v-earn { font-size: 1rem; line-height: 1.6; }
+#v-earn .measure, #v-earn .evtext, #v-earn .driver, #v-earn .tiernote, #v-earn .warn, #v-earn .legend { font-size: .92rem; }
+#v-earn .eyebrow, #v-earn .badge { font-size: .85rem; }
+#v-earn .seg button { min-height: 48px; font-size: 1rem; }
+#v-earn select { min-height: 48px; font-size: 1rem; }
 #v-earn .wrap { padding: 0; max-width: none; }
 #v-earn h1 { border: 0; padding: 0; }
 #v-earn summary { font: 600 1rem/1.4 var(--font-body); padding: 0; min-height: 0; }
@@ -178,7 +191,7 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 #v-earn details { border: 1px solid var(--line); margin: 0; }
 #v-earn ul { padding-left: 20px; }
 #v-earn .chartbox svg { min-width: 640px !important; max-width: none !important; }
-#v-earn svg .lbl { font-size: 10px; }
+#v-earn svg .lbl { font-size: 11px; }
 #v-earn .together { margin-top: 2.5rem; }
 #v-earn .together h2 { font: 400 1.6rem/1.2 var(--display); margin: 0 0 .6rem; }
 #v-earn .together h3 { font: 400 1.25rem/1.25 var(--display); margin: 1.8rem 0 .6rem; }
@@ -202,6 +215,7 @@ body { margin: 0; }
 <section class="view" id="v-home" data-view="home">
   <p class="eyebrow">For you to browse, October 2026</p>
   <h1>Your own small business: some options</h1>
+  <p class="note"><a href="#settings">Text too small? Make it bigger</a></p>
   <p>You've been thinking about four kinds of work you could do on your own: selling your baking, making videos of your dogs, earning from Amazon links, and selling used books. This page gives a short look at each so you can compare them, then what each could pay if you get good at it and how they fit together.</p><p>None of it is a plan you have to follow. You could pick one, try several, or set them all aside, and change your mind as you go. None needs a big investment you could lose.</p>
   <h2>What matters to you?</h2>
   <p class="hint">Tap any that matter. The options below show how many of your picks each one fits. You can try more than one.</p>
@@ -430,6 +444,14 @@ body { margin: 0; }
 <p><strong>A first small step:</strong> list five of your own books on eBay with a helper. Or scan 200 books at one thrift store with the free BookScouter app, note which would have made $5, and buy nothing.</p>
   <div class="pair"><a class="next" href="#guide-books">Read the full books guide</a>
   <a class="next ghost" href="#baking">Next option: Home baking</a></div>
+</section>
+
+<section class="view" id="v-settings" data-view="settings" hidden>
+  <p class="eyebrow">Settings</p>
+  <h1>Text size</h1>
+  <p>Tap a size. The whole page changes, and this phone remembers your choice.</p>
+  <div class="sizes" role="group" aria-label="Text size"><button type="button" class="size" data-size="0" aria-pressed="false"><span class="s" style="font-size:20px">Normal</span></button><button type="button" class="size" data-size="1" aria-pressed="false"><span class="s" style="font-size:23px">Large</span></button><button type="button" class="size" data-size="2" aria-pressed="false"><span class="s" style="font-size:26px">Larger</span></button><button type="button" class="size" data-size="3" aria-pressed="false"><span class="s" style="font-size:30px">Largest</span></button></div>
+  <p class="note">Your phone can also make text bigger: on an iPhone, Settings, then Display &amp; Brightness, then Text Size; on Android, Settings, then Display, then Font size. You can also pinch to zoom.</p>
 </section>
 
 <section class="view" id="v-guides" data-view="guides" hidden>
@@ -739,12 +761,13 @@ body { margin: 0; }
   <a href="#home" data-tab="home"><span class="i">◫</span>Options</a>
   <a href="#earn" data-tab="earn"><span class="i">▲</span>Explore</a>
   <a href="#guides" data-tab="guides"><span class="i">☰</span>Guides</a>
+  <a href="#settings" data-tab="settings"><span class="i">Aa</span>Text size</a>
 </nav>
 <script>
 (function () {
-  var KEYS = ["home", "earn", "guides", "baking", "dogs", "amazon", "books", "guide-baking", "guide-dogs", "guide-amazon", "guide-books"];
+  var KEYS = ["home", "earn", "guides", "settings", "baking", "dogs", "amazon", "books", "guide-baking", "guide-dogs", "guide-amazon", "guide-books"];
   function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); localStorage.setItem(k, v); } catch (e) { return null; } }
-  function tabFor(key) { return key.indexOf("guide") === 0 ? "guides" : key === "earn" ? "earn" : "home"; }
+  function tabFor(key) { return key.indexOf("guide") === 0 ? "guides" : key === "earn" || key === "settings" ? key : "home"; }
   function show(key, keepScroll) {
     if (key === "path") key = "earn";
     if (KEYS.indexOf(key) < 0) key = "home";
@@ -756,6 +779,15 @@ body { margin: 0; }
   }
   window.addEventListener("hashchange", function () { show(location.hash.slice(1)); });
   show(location.hash.slice(1), true);
+
+  // Text size is remembered on this phone only.
+  var sizes = document.querySelectorAll(".size");
+  function setSize(n) {
+    if (n === "0") document.documentElement.removeAttribute("data-size"); else document.documentElement.setAttribute("data-size", n);
+    sizes.forEach(function (b) { b.setAttribute("aria-pressed", b.dataset.size === n ? "true" : "false"); });
+  }
+  setSize(store("text-size") || "0");
+  sizes.forEach(function (b) { b.addEventListener("click", function () { setSize(b.dataset.size); store("text-size", b.dataset.size); }); });
 
   // Checklists are remembered on this phone only.
   document.querySelectorAll('li.check input').forEach(function (box) {
